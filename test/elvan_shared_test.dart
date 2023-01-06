@@ -1,6 +1,5 @@
+import 'package:elvan_shared/elvan_shared.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:elvan_shared_shared/elvan_shared.dart';
 
 void main() {
   test('adds one to input values', () {
