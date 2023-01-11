@@ -22,7 +22,8 @@ _$_ElvanUserDto _$$_ElvanUserDtoFromJson(Map<String, dynamic> json) =>
       totalOrdersDelivered: json['totalOrdersDelivered'] as int? ?? 0,
       totalOrdersPending: json['totalOrdersPending'] as int? ?? 0,
       totalOrdersRejected: json['totalOrdersRejected'] as int? ?? 0,
-      createdAt: json['createdAt'],
+      createdAt:
+          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
 Map<String, dynamic> _$$_ElvanUserDtoToJson(_$_ElvanUserDto instance) =>
@@ -41,5 +42,5 @@ Map<String, dynamic> _$$_ElvanUserDtoToJson(_$_ElvanUserDto instance) =>
       'totalOrdersDelivered': instance.totalOrdersDelivered,
       'totalOrdersPending': instance.totalOrdersPending,
       'totalOrdersRejected': instance.totalOrdersRejected,
-      'createdAt': instance.createdAt,
+      'createdAt': TimestampConverter.timestampToJson(instance.createdAt),
     };

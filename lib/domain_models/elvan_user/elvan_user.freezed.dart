@@ -377,7 +377,8 @@ class _$_ElvanUser extends _ElvanUser {
                 other.totalOrdersPending == totalOrdersPending) &&
             (identical(other.totalOrdersRejected, totalOrdersRejected) ||
                 other.totalOrdersRejected == totalOrdersRejected) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt));
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
@@ -398,7 +399,7 @@ class _$_ElvanUser extends _ElvanUser {
       totalOrdersDelivered,
       totalOrdersPending,
       totalOrdersRejected,
-      const DeepCollectionEquality().hash(createdAt));
+      createdAt);
 
   @JsonKey(ignore: true)
   @override
