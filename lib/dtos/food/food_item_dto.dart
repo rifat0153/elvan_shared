@@ -31,6 +31,8 @@ class FoodItemDto with _$FoodItemDto {
         List<String> tags,
     @Default([])
         List<String> ingredients,
+    @Default(false)
+        bool isAvailable,
     @Default([])
         List<BuildStepDto> buildStepsOverrides,
     @Default([])

@@ -25,6 +25,7 @@ _$_FoodItemDto _$$_FoodItemDtoFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      isAvailable: json['isAvailable'] as bool? ?? false,
       buildStepsOverrides: (json['buildStepsOverrides'] as List<dynamic>?)
               ?.map((e) => BuildStepDto.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -52,6 +53,7 @@ Map<String, dynamic> _$$_FoodItemDtoToJson(_$_FoodItemDto instance) =>
       'quantity': instance.quantity,
       'tags': instance.tags,
       'ingredients': instance.ingredients,
+      'isAvailable': instance.isAvailable,
       'buildStepsOverrides':
           instance.buildStepsOverrides.map((e) => e.toJson()).toList(),
       'allergens': instance.allergens,

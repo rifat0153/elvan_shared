@@ -32,6 +32,7 @@ mixin _$FoodItemDto {
   int get quantity => throw _privateConstructorUsedError;
   List<String> get tags => throw _privateConstructorUsedError;
   List<String> get ingredients => throw _privateConstructorUsedError;
+  bool get isAvailable => throw _privateConstructorUsedError;
   List<BuildStepDto> get buildStepsOverrides =>
       throw _privateConstructorUsedError;
   List<String> get allergens => throw _privateConstructorUsedError;
@@ -66,6 +67,7 @@ abstract class $FoodItemDtoCopyWith<$Res> {
       int quantity,
       List<String> tags,
       List<String> ingredients,
+      bool isAvailable,
       List<BuildStepDto> buildStepsOverrides,
       List<String> allergens,
       int? timeToPrepareInMinutes,
@@ -98,6 +100,7 @@ class _$FoodItemDtoCopyWithImpl<$Res, $Val extends FoodItemDto>
     Object? quantity = null,
     Object? tags = null,
     Object? ingredients = null,
+    Object? isAvailable = null,
     Object? buildStepsOverrides = null,
     Object? allergens = null,
     Object? timeToPrepareInMinutes = freezed,
@@ -152,6 +155,10 @@ class _$FoodItemDtoCopyWithImpl<$Res, $Val extends FoodItemDto>
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isAvailable: null == isAvailable
+          ? _value.isAvailable
+          : isAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
       buildStepsOverrides: null == buildStepsOverrides
           ? _value.buildStepsOverrides
           : buildStepsOverrides // ignore: cast_nullable_to_non_nullable
@@ -193,6 +200,7 @@ abstract class _$$_FoodItemDtoCopyWith<$Res>
       int quantity,
       List<String> tags,
       List<String> ingredients,
+      bool isAvailable,
       List<BuildStepDto> buildStepsOverrides,
       List<String> allergens,
       int? timeToPrepareInMinutes,
@@ -223,6 +231,7 @@ class __$$_FoodItemDtoCopyWithImpl<$Res>
     Object? quantity = null,
     Object? tags = null,
     Object? ingredients = null,
+    Object? isAvailable = null,
     Object? buildStepsOverrides = null,
     Object? allergens = null,
     Object? timeToPrepareInMinutes = freezed,
@@ -277,6 +286,10 @@ class __$$_FoodItemDtoCopyWithImpl<$Res>
           ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isAvailable: null == isAvailable
+          ? _value.isAvailable
+          : isAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
       buildStepsOverrides: null == buildStepsOverrides
           ? _value._buildStepsOverrides
           : buildStepsOverrides // ignore: cast_nullable_to_non_nullable
@@ -314,6 +327,7 @@ class _$_FoodItemDto implements _FoodItemDto {
       this.quantity = 0,
       final List<String> tags = const [],
       final List<String> ingredients = const [],
+      this.isAvailable = false,
       final List<BuildStepDto> buildStepsOverrides = const [],
       final List<String> allergens = const [],
       this.timeToPrepareInMinutes,
@@ -367,6 +381,9 @@ class _$_FoodItemDto implements _FoodItemDto {
     return EqualUnmodifiableListView(_ingredients);
   }
 
+  @override
+  @JsonKey()
+  final bool isAvailable;
   final List<BuildStepDto> _buildStepsOverrides;
   @override
   @JsonKey()
@@ -396,7 +413,7 @@ class _$_FoodItemDto implements _FoodItemDto {
 
   @override
   String toString() {
-    return 'FoodItemDto(id: $id, title: $title, price: $price, discount: $discount, categoryId: $categoryId, categoryTitle: $categoryTitle, description: $description, imageUrl: $imageUrl, isTopPick: $isTopPick, quantity: $quantity, tags: $tags, ingredients: $ingredients, buildStepsOverrides: $buildStepsOverrides, allergens: $allergens, timeToPrepareInMinutes: $timeToPrepareInMinutes, createdAt: $createdAt)';
+    return 'FoodItemDto(id: $id, title: $title, price: $price, discount: $discount, categoryId: $categoryId, categoryTitle: $categoryTitle, description: $description, imageUrl: $imageUrl, isTopPick: $isTopPick, quantity: $quantity, tags: $tags, ingredients: $ingredients, isAvailable: $isAvailable, buildStepsOverrides: $buildStepsOverrides, allergens: $allergens, timeToPrepareInMinutes: $timeToPrepareInMinutes, createdAt: $createdAt)';
   }
 
   @override
@@ -424,6 +441,8 @@ class _$_FoodItemDto implements _FoodItemDto {
             const DeepCollectionEquality().equals(other._tags, _tags) &&
             const DeepCollectionEquality()
                 .equals(other._ingredients, _ingredients) &&
+            (identical(other.isAvailable, isAvailable) ||
+                other.isAvailable == isAvailable) &&
             const DeepCollectionEquality()
                 .equals(other._buildStepsOverrides, _buildStepsOverrides) &&
             const DeepCollectionEquality()
@@ -450,6 +469,7 @@ class _$_FoodItemDto implements _FoodItemDto {
       quantity,
       const DeepCollectionEquality().hash(_tags),
       const DeepCollectionEquality().hash(_ingredients),
+      isAvailable,
       const DeepCollectionEquality().hash(_buildStepsOverrides),
       const DeepCollectionEquality().hash(_allergens),
       timeToPrepareInMinutes,
@@ -483,6 +503,7 @@ abstract class _FoodItemDto implements FoodItemDto {
       final int quantity,
       final List<String> tags,
       final List<String> ingredients,
+      final bool isAvailable,
       final List<BuildStepDto> buildStepsOverrides,
       final List<String> allergens,
       final int? timeToPrepareInMinutes,
@@ -516,6 +537,8 @@ abstract class _FoodItemDto implements FoodItemDto {
   List<String> get tags;
   @override
   List<String> get ingredients;
+  @override
+  bool get isAvailable;
   @override
   List<BuildStepDto> get buildStepsOverrides;
   @override
