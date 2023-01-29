@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart' show immutable;
 class Constants {
   const Constants._();
 
-  static const firebaseCollectionUsers = 'users';
+  static const firebaseCollectionUsers = 'elvan_users';
 
   static const firebaseCollectionFavourites = 'favourites';
 
