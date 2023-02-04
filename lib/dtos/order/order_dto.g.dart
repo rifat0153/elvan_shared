@@ -19,6 +19,9 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
       status: OrderStatusDto.fromJson(json['status'] as String),
       paymentMethod: json['paymentMethod'] as String?,
       paymentStatus: json['paymentStatus'] as String?,
+      orderAcceptedAt: TimestampConverter.timestampFromJson(
+          json['orderAcceptedAt'] as Timestamp?),
+      orderPreparationTime: json['orderPreparationTime'] as int?,
       instructions: (json['instructions'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -37,6 +40,9 @@ Map<String, dynamic> _$$_OrderToJson(_$_Order instance) => <String, dynamic>{
       'status': OrderStatusDto.toJson(instance.status),
       'paymentMethod': instance.paymentMethod,
       'paymentStatus': instance.paymentStatus,
+      'orderAcceptedAt':
+          TimestampConverter.timestampToJson(instance.orderAcceptedAt),
+      'orderPreparationTime': instance.orderPreparationTime,
       'instructions': instance.instructions,
       'createdAt': TimestampConverter.timestampToJson(instance.createdAt),
     };

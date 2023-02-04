@@ -22,6 +22,9 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      orderAcceptedAt: TimestampConverter.timestampFromJson(
+          json['orderAcceptedAt'] as Timestamp?),
+      orderPreparationTime: json['orderPreparationTime'] as int?,
       createdAt:
           TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
@@ -37,5 +40,8 @@ Map<String, dynamic> _$$_OrderToJson(_$_Order instance) => <String, dynamic>{
       'paymentMethod': instance.paymentMethod,
       'paymentStatus': instance.paymentStatus,
       'instructions': instance.instructions,
+      'orderAcceptedAt':
+          TimestampConverter.timestampToJson(instance.orderAcceptedAt),
+      'orderPreparationTime': instance.orderPreparationTime,
       'createdAt': TimestampConverter.timestampToJson(instance.createdAt),
     };

@@ -26,6 +26,12 @@ class OrderDto with _$OrderDto {
         required OrderStatusDto status,
     String? paymentMethod,
     String? paymentStatus,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampFromJson,
+      toJson: TimestampConverter.timestampToJson,
+    )
+        Timestamp? orderAcceptedAt,
+    int? orderPreparationTime,
     @Default([])
         List<String> instructions,
     @JsonKey(
@@ -35,6 +41,5 @@ class OrderDto with _$OrderDto {
         Timestamp? createdAt,
   }) = _Order;
 
-  factory OrderDto.fromJson(Map<String, dynamic> json) =>
-      _$OrderDtoFromJson(json);
+  factory OrderDto.fromJson(Map<String, dynamic> json) => _$OrderDtoFromJson(json);
 }

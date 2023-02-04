@@ -34,6 +34,12 @@ class Order with _$Order {
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
     )
+        Timestamp? orderAcceptedAt,
+    int? orderPreparationTime,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampFromJson,
+      toJson: TimestampConverter.timestampToJson,
+    )
         Timestamp? createdAt,
   }) = _Order;
 
@@ -47,6 +53,8 @@ class Order with _$Order {
         discount: orderDto.discount,
         subTotal: orderDto.subTotal,
         status: OrderStatus.fromDto(orderDto.status),
+        orderAcceptedAt: orderDto.orderAcceptedAt,
+        orderPreparationTime: orderDto.orderPreparationTime,
         paymentMethod: orderDto.paymentMethod,
         paymentStatus: orderDto.paymentStatus,
         instructions: orderDto.instructions,
@@ -61,6 +69,8 @@ class Order with _$Order {
         discount: discount,
         subTotal: subTotal,
         status: status.toDto(),
+        orderAcceptedAt: orderAcceptedAt,
+        orderPreparationTime: orderPreparationTime,
         paymentMethod: paymentMethod,
         paymentStatus: paymentStatus,
         instructions: instructions,

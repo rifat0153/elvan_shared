@@ -30,6 +30,11 @@ mixin _$OrderDto {
   OrderStatusDto get status => throw _privateConstructorUsedError;
   String? get paymentMethod => throw _privateConstructorUsedError;
   String? get paymentStatus => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampFromJson,
+      toJson: TimestampConverter.timestampToJson)
+  Timestamp? get orderAcceptedAt => throw _privateConstructorUsedError;
+  int? get orderPreparationTime => throw _privateConstructorUsedError;
   List<String> get instructions => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
@@ -58,6 +63,9 @@ abstract class $OrderDtoCopyWith<$Res> {
           OrderStatusDto status,
       String? paymentMethod,
       String? paymentStatus,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
+          Timestamp? orderAcceptedAt,
+      int? orderPreparationTime,
       List<String> instructions,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           Timestamp? createdAt});
@@ -85,6 +93,8 @@ class _$OrderDtoCopyWithImpl<$Res, $Val extends OrderDto>
     Object? status = null,
     Object? paymentMethod = freezed,
     Object? paymentStatus = freezed,
+    Object? orderAcceptedAt = freezed,
+    Object? orderPreparationTime = freezed,
     Object? instructions = null,
     Object? createdAt = freezed,
   }) {
@@ -125,6 +135,14 @@ class _$OrderDtoCopyWithImpl<$Res, $Val extends OrderDto>
           ? _value.paymentStatus
           : paymentStatus // ignore: cast_nullable_to_non_nullable
               as String?,
+      orderAcceptedAt: freezed == orderAcceptedAt
+          ? _value.orderAcceptedAt
+          : orderAcceptedAt // ignore: cast_nullable_to_non_nullable
+              as Timestamp?,
+      orderPreparationTime: freezed == orderPreparationTime
+          ? _value.orderPreparationTime
+          : orderPreparationTime // ignore: cast_nullable_to_non_nullable
+              as int?,
       instructions: null == instructions
           ? _value.instructions
           : instructions // ignore: cast_nullable_to_non_nullable
@@ -154,6 +172,9 @@ abstract class _$$_OrderCopyWith<$Res> implements $OrderDtoCopyWith<$Res> {
           OrderStatusDto status,
       String? paymentMethod,
       String? paymentStatus,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
+          Timestamp? orderAcceptedAt,
+      int? orderPreparationTime,
       List<String> instructions,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           Timestamp? createdAt});
@@ -178,6 +199,8 @@ class __$$_OrderCopyWithImpl<$Res>
     Object? status = null,
     Object? paymentMethod = freezed,
     Object? paymentStatus = freezed,
+    Object? orderAcceptedAt = freezed,
+    Object? orderPreparationTime = freezed,
     Object? instructions = null,
     Object? createdAt = freezed,
   }) {
@@ -218,6 +241,14 @@ class __$$_OrderCopyWithImpl<$Res>
           ? _value.paymentStatus
           : paymentStatus // ignore: cast_nullable_to_non_nullable
               as String?,
+      orderAcceptedAt: freezed == orderAcceptedAt
+          ? _value.orderAcceptedAt
+          : orderAcceptedAt // ignore: cast_nullable_to_non_nullable
+              as Timestamp?,
+      orderPreparationTime: freezed == orderPreparationTime
+          ? _value.orderPreparationTime
+          : orderPreparationTime // ignore: cast_nullable_to_non_nullable
+              as int?,
       instructions: null == instructions
           ? _value._instructions
           : instructions // ignore: cast_nullable_to_non_nullable
@@ -245,6 +276,9 @@ class _$_Order implements _Order {
           required this.status,
       this.paymentMethod,
       this.paymentStatus,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
+          this.orderAcceptedAt,
+      this.orderPreparationTime,
       final List<String> instructions = const [],
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           this.createdAt})
@@ -281,6 +315,13 @@ class _$_Order implements _Order {
   final String? paymentMethod;
   @override
   final String? paymentStatus;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampFromJson,
+      toJson: TimestampConverter.timestampToJson)
+  final Timestamp? orderAcceptedAt;
+  @override
+  final int? orderPreparationTime;
   final List<String> _instructions;
   @override
   @JsonKey()
@@ -298,7 +339,7 @@ class _$_Order implements _Order {
 
   @override
   String toString() {
-    return 'OrderDto(id: $id, userId: $userId, items: $items, total: $total, subTotal: $subTotal, discount: $discount, status: $status, paymentMethod: $paymentMethod, paymentStatus: $paymentStatus, instructions: $instructions, createdAt: $createdAt)';
+    return 'OrderDto(id: $id, userId: $userId, items: $items, total: $total, subTotal: $subTotal, discount: $discount, status: $status, paymentMethod: $paymentMethod, paymentStatus: $paymentStatus, orderAcceptedAt: $orderAcceptedAt, orderPreparationTime: $orderPreparationTime, instructions: $instructions, createdAt: $createdAt)';
   }
 
   @override
@@ -319,6 +360,10 @@ class _$_Order implements _Order {
                 other.paymentMethod == paymentMethod) &&
             (identical(other.paymentStatus, paymentStatus) ||
                 other.paymentStatus == paymentStatus) &&
+            (identical(other.orderAcceptedAt, orderAcceptedAt) ||
+                other.orderAcceptedAt == orderAcceptedAt) &&
+            (identical(other.orderPreparationTime, orderPreparationTime) ||
+                other.orderPreparationTime == orderPreparationTime) &&
             const DeepCollectionEquality()
                 .equals(other._instructions, _instructions) &&
             (identical(other.createdAt, createdAt) ||
@@ -338,6 +383,8 @@ class _$_Order implements _Order {
       status,
       paymentMethod,
       paymentStatus,
+      orderAcceptedAt,
+      orderPreparationTime,
       const DeepCollectionEquality().hash(_instructions),
       createdAt);
 
@@ -367,6 +414,9 @@ abstract class _Order implements OrderDto {
           required final OrderStatusDto status,
       final String? paymentMethod,
       final String? paymentStatus,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
+          final Timestamp? orderAcceptedAt,
+      final int? orderPreparationTime,
       final List<String> instructions,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           final Timestamp? createdAt}) = _$_Order;
@@ -392,6 +442,13 @@ abstract class _Order implements OrderDto {
   String? get paymentMethod;
   @override
   String? get paymentStatus;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampFromJson,
+      toJson: TimestampConverter.timestampToJson)
+  Timestamp? get orderAcceptedAt;
+  @override
+  int? get orderPreparationTime;
   @override
   List<String> get instructions;
   @override
