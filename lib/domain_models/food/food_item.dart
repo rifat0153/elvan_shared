@@ -41,6 +41,8 @@ class FoodItem with _$FoodItem {
     @Default([])
         List<String> allergens,
     int? timeToPrepareInMinutes,
+        @Default(false)
+        bool isAvailable,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson,
@@ -68,6 +70,7 @@ class FoodItem with _$FoodItem {
       allergens: foodItemDto.allergens,
       timeToPrepareInMinutes: foodItemDto.timeToPrepareInMinutes,
       createdAt: foodItemDto.createdAt,
+      isAvailable: foodItemDto.isAvailable
     );
   }
 
@@ -89,6 +92,7 @@ class FoodItem with _$FoodItem {
       allergens: allergens,
       timeToPrepareInMinutes: timeToPrepareInMinutes,
       createdAt: createdAt,
+      isAvailable: isAvailable
     );
   }
 

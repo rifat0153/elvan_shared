@@ -34,6 +34,7 @@ _$_FoodItem _$$_FoodItemFromJson(Map<String, dynamic> json) => _$_FoodItem(
               .toList() ??
           const [],
       timeToPrepareInMinutes: json['timeToPrepareInMinutes'] as int?,
+      isAvailable: json['isAvailable'] as bool? ?? false,
       createdAt:
           TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
@@ -57,5 +58,6 @@ Map<String, dynamic> _$$_FoodItemToJson(_$_FoodItem instance) =>
           instance.buildStepsOverrides.map((e) => e.toJson()).toList(),
       'allergens': instance.allergens,
       'timeToPrepareInMinutes': instance.timeToPrepareInMinutes,
+      'isAvailable': instance.isAvailable,
       'createdAt': TimestampConverter.timestampToJson(instance.createdAt),
     };
