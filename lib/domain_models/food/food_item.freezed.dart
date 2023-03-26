@@ -36,6 +36,7 @@ mixin _$FoodItem {
   List<BuildStep> get buildStepsOverrides => throw _privateConstructorUsedError;
   List<String> get allergens => throw _privateConstructorUsedError;
   int? get timeToPrepareInMinutes => throw _privateConstructorUsedError;
+  bool get isAvailable => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson)
@@ -69,6 +70,7 @@ abstract class $FoodItemCopyWith<$Res> {
       List<BuildStep> buildStepsOverrides,
       List<String> allergens,
       int? timeToPrepareInMinutes,
+      bool isAvailable,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           Timestamp? createdAt});
 }
@@ -102,6 +104,7 @@ class _$FoodItemCopyWithImpl<$Res, $Val extends FoodItem>
     Object? buildStepsOverrides = null,
     Object? allergens = null,
     Object? timeToPrepareInMinutes = freezed,
+    Object? isAvailable = null,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -169,6 +172,10 @@ class _$FoodItemCopyWithImpl<$Res, $Val extends FoodItem>
           ? _value.timeToPrepareInMinutes
           : timeToPrepareInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
+      isAvailable: null == isAvailable
+          ? _value.isAvailable
+          : isAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -201,6 +208,7 @@ abstract class _$$_FoodItemCopyWith<$Res> implements $FoodItemCopyWith<$Res> {
       List<BuildStep> buildStepsOverrides,
       List<String> allergens,
       int? timeToPrepareInMinutes,
+      bool isAvailable,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           Timestamp? createdAt});
 }
@@ -232,6 +240,7 @@ class __$$_FoodItemCopyWithImpl<$Res>
     Object? buildStepsOverrides = null,
     Object? allergens = null,
     Object? timeToPrepareInMinutes = freezed,
+    Object? isAvailable = null,
     Object? createdAt = freezed,
   }) {
     return _then(_$_FoodItem(
@@ -299,6 +308,10 @@ class __$$_FoodItemCopyWithImpl<$Res>
           ? _value.timeToPrepareInMinutes
           : timeToPrepareInMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
+      isAvailable: null == isAvailable
+          ? _value.isAvailable
+          : isAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -328,6 +341,7 @@ class _$_FoodItem extends _FoodItem {
       final List<BuildStep> buildStepsOverrides = const [],
       final List<String> allergens = const [],
       this.timeToPrepareInMinutes,
+      this.isAvailable = false,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           this.createdAt})
       : _tags = tags,
@@ -404,6 +418,9 @@ class _$_FoodItem extends _FoodItem {
   @override
   final int? timeToPrepareInMinutes;
   @override
+  @JsonKey()
+  final bool isAvailable;
+  @override
   @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
       toJson: TimestampConverter.timestampToJson)
@@ -411,7 +428,7 @@ class _$_FoodItem extends _FoodItem {
 
   @override
   String toString() {
-    return 'FoodItem(id: $id, title: $title, price: $price, categoryId: $categoryId, categoryTitle: $categoryTitle, discount: $discount, isTopPick: $isTopPick, description: $description, imageUrl: $imageUrl, isFavorite: $isFavorite, quantity: $quantity, tags: $tags, ingredients: $ingredients, buildStepsOverrides: $buildStepsOverrides, allergens: $allergens, timeToPrepareInMinutes: $timeToPrepareInMinutes, createdAt: $createdAt)';
+    return 'FoodItem(id: $id, title: $title, price: $price, categoryId: $categoryId, categoryTitle: $categoryTitle, discount: $discount, isTopPick: $isTopPick, description: $description, imageUrl: $imageUrl, isFavorite: $isFavorite, quantity: $quantity, tags: $tags, ingredients: $ingredients, buildStepsOverrides: $buildStepsOverrides, allergens: $allergens, timeToPrepareInMinutes: $timeToPrepareInMinutes, isAvailable: $isAvailable, createdAt: $createdAt)';
   }
 
   @override
@@ -447,6 +464,8 @@ class _$_FoodItem extends _FoodItem {
                 .equals(other._allergens, _allergens) &&
             (identical(other.timeToPrepareInMinutes, timeToPrepareInMinutes) ||
                 other.timeToPrepareInMinutes == timeToPrepareInMinutes) &&
+            (identical(other.isAvailable, isAvailable) ||
+                other.isAvailable == isAvailable) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt));
   }
@@ -471,6 +490,7 @@ class _$_FoodItem extends _FoodItem {
       const DeepCollectionEquality().hash(_buildStepsOverrides),
       const DeepCollectionEquality().hash(_allergens),
       timeToPrepareInMinutes,
+      isAvailable,
       createdAt);
 
   @JsonKey(ignore: true)
@@ -505,6 +525,7 @@ abstract class _FoodItem extends FoodItem {
       final List<BuildStep> buildStepsOverrides,
       final List<String> allergens,
       final int? timeToPrepareInMinutes,
+      final bool isAvailable,
       @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
           final Timestamp? createdAt}) = _$_FoodItem;
   const _FoodItem._() : super._();
@@ -543,6 +564,8 @@ abstract class _FoodItem extends FoodItem {
   List<String> get allergens;
   @override
   int? get timeToPrepareInMinutes;
+  @override
+  bool get isAvailable;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
