@@ -1,5 +1,5 @@
 name: elvan_shared
-description: A new Flutter package project.
+description: Elvan shared project. Contains common logic and models.
 version: 0.0.1
 private: true
 
