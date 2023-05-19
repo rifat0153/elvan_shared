@@ -21,12 +21,10 @@ _$_ElvanUser _$$_ElvanUserFromJson(Map<String, dynamic> json) => _$_ElvanUser(
       totalOrdersDelivered: json['totalOrdersDelivered'] as int? ?? 0,
       totalOrdersPending: json['totalOrdersPending'] as int? ?? 0,
       totalOrdersRejected: json['totalOrdersRejected'] as int? ?? 0,
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_ElvanUserToJson(_$_ElvanUser instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_ElvanUserToJson(_$_ElvanUser instance) => <String, dynamic>{
       'id': instance.id,
       'uid': instance.uid,
       'name': instance.name,

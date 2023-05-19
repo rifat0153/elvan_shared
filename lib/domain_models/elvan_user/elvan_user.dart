@@ -38,8 +38,7 @@ class ElvanUser with _$ElvanUser {
         Timestamp? createdAt,
   }) = _ElvanUser;
 
-  factory ElvanUser.fromJson(Map<String, dynamic> json) =>
-      _$ElvanUserFromJson(json);
+  factory ElvanUser.fromJson(Map<String, dynamic> json) => _$ElvanUserFromJson(json);
 
   factory ElvanUser.fromDto(ElvanUserDto elvanUserDto) => ElvanUser(
         id: elvanUserDto.id,

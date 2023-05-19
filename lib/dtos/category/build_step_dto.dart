@@ -19,6 +19,5 @@ class BuildStepDto with _$BuildStepDto {
     @Default([]) List<AddOnDto> addOns,
   }) = _FoodItemBuildStepDtos;
 
-  factory BuildStepDto.fromJson(Map<String, dynamic> json) =>
-      _$BuildStepDtoFromJson(json);
+  factory BuildStepDto.fromJson(Map<String, dynamic> json) => _$BuildStepDtoFromJson(json);
 }

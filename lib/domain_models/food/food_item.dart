@@ -41,7 +41,7 @@ class FoodItem with _$FoodItem {
     @Default([])
         List<String> allergens,
     int? timeToPrepareInMinutes,
-        @Default(false)
+    @Default(false)
         bool isAvailable,
     @JsonKey(
       fromJson: TimestampConverter.timestampFromJson,
@@ -52,50 +52,45 @@ class FoodItem with _$FoodItem {
 
   factory FoodItem.fromDto(FoodItemDto foodItemDto) {
     return FoodItem(
-      id: foodItemDto.id,
-      title: foodItemDto.title,
-      price: foodItemDto.price,
-      discount: foodItemDto.discount,
-      categoryId: foodItemDto.categoryId ?? '',
-      categoryTitle: foodItemDto.categoryTitle ?? '',
-      isTopPick: foodItemDto.isTopPick,
-      description: foodItemDto.description,
-      imageUrl: foodItemDto.imageUrl,
-      quantity: foodItemDto.quantity,
-      tags: foodItemDto.tags,
-      ingredients: foodItemDto.ingredients,
-      buildStepsOverrides: foodItemDto.buildStepsOverrides
-          .map((e) => BuildStep.fromDto(e))
-          .toList(),
-      allergens: foodItemDto.allergens,
-      timeToPrepareInMinutes: foodItemDto.timeToPrepareInMinutes,
-      createdAt: foodItemDto.createdAt,
-      isAvailable: foodItemDto.isAvailable
-    );
+        id: foodItemDto.id,
+        title: foodItemDto.title,
+        price: foodItemDto.price,
+        discount: foodItemDto.discount,
+        categoryId: foodItemDto.categoryId ?? '',
+        categoryTitle: foodItemDto.categoryTitle ?? '',
+        isTopPick: foodItemDto.isTopPick,
+        description: foodItemDto.description,
+        imageUrl: foodItemDto.imageUrl,
+        quantity: foodItemDto.quantity,
+        tags: foodItemDto.tags,
+        ingredients: foodItemDto.ingredients,
+        buildStepsOverrides: foodItemDto.buildStepsOverrides.map((e) => BuildStep.fromDto(e)).toList(),
+        allergens: foodItemDto.allergens,
+        timeToPrepareInMinutes: foodItemDto.timeToPrepareInMinutes,
+        createdAt: foodItemDto.createdAt,
+        isAvailable: foodItemDto.isAvailable);
   }
 
   FoodItemDto toDto() {
     return FoodItemDto(
-      id: id,
-      title: title,
-      price: price,
-      discount: discount,
-      categoryId: categoryId,
-      categoryTitle: categoryTitle,
-      isTopPick: isTopPick,
-      description: description,
-      imageUrl: imageUrl,
-      quantity: quantity,
-      tags: tags,
-      ingredients: ingredients,
-      buildStepsOverrides: buildStepsOverrides.map((e) => e.toDto()).toList(),
-      allergens: allergens,
-      timeToPrepareInMinutes: timeToPrepareInMinutes,
-      createdAt: createdAt,
-      isAvailable: isAvailable
-    );
+        id: id,
+        title: title,
+        price: price,
+        discount: discount,
+        categoryId: categoryId,
+        categoryTitle: categoryTitle,
+        isTopPick: isTopPick,
+        description: description,
+        imageUrl: imageUrl,
+        quantity: quantity,
+        tags: tags,
+        ingredients: ingredients,
+        buildStepsOverrides: buildStepsOverrides.map((e) => e.toDto()).toList(),
+        allergens: allergens,
+        timeToPrepareInMinutes: timeToPrepareInMinutes,
+        createdAt: createdAt,
+        isAvailable: isAvailable);
   }
 
-  factory FoodItem.fromJson(Map<String, dynamic> json) =>
-      _$FoodItemFromJson(json);
+  factory FoodItem.fromJson(Map<String, dynamic> json) => _$FoodItemFromJson(json);
 }

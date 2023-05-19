@@ -15,8 +15,7 @@ enum OrderStatus {
   final String status;
 
   static OrderStatus fromDto(OrderStatusDto status) {
-    final val =
-        OrderStatus.values.firstWhereOrNull((e) => e.status == status.status);
+    final val = OrderStatus.values.firstWhereOrNull((e) => e.status == status.status);
     return val ?? OrderStatus.unknown;
   }
 

@@ -17,8 +17,7 @@ class Cart with _$Cart {
 
   bool get isEmpty => cartItems.isEmpty;
 
-  double get total =>
-      cartItems.fold(0, (total, cartItem) => total + cartItem.price);
+  double get total => cartItems.fold(0, (total, cartItem) => total + cartItem.price);
 
   double getTotalBeforeDiscount() {
     double total = 0;

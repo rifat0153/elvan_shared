@@ -26,22 +26,18 @@ mixin _$SettingDto {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SettingDtoCopyWith<SettingDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SettingDtoCopyWith<SettingDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SettingDtoCopyWith<$Res> {
-  factory $SettingDtoCopyWith(
-          SettingDto value, $Res Function(SettingDto) then) =
-      _$SettingDtoCopyWithImpl<$Res, SettingDto>;
+  factory $SettingDtoCopyWith(SettingDto value, $Res Function(SettingDto) then) = _$SettingDtoCopyWithImpl<$Res, SettingDto>;
   @useResult
   $Res call({bool takingOrder, int defaultTime, String? notice});
 }
 
 /// @nodoc
-class _$SettingDtoCopyWithImpl<$Res, $Val extends SettingDto>
-    implements $SettingDtoCopyWith<$Res> {
+class _$SettingDtoCopyWithImpl<$Res, $Val extends SettingDto> implements $SettingDtoCopyWith<$Res> {
   _$SettingDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -74,23 +70,16 @@ class _$SettingDtoCopyWithImpl<$Res, $Val extends SettingDto>
 }
 
 /// @nodoc
-abstract class _$$_SettingDtoCopyWith<$Res>
-    implements $SettingDtoCopyWith<$Res> {
-  factory _$$_SettingDtoCopyWith(
-          _$_SettingDto value, $Res Function(_$_SettingDto) then) =
-      __$$_SettingDtoCopyWithImpl<$Res>;
+abstract class _$$_SettingDtoCopyWith<$Res> implements $SettingDtoCopyWith<$Res> {
+  factory _$$_SettingDtoCopyWith(_$_SettingDto value, $Res Function(_$_SettingDto) then) = __$$_SettingDtoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool takingOrder, int defaultTime, String? notice});
 }
 
 /// @nodoc
-class __$$_SettingDtoCopyWithImpl<$Res>
-    extends _$SettingDtoCopyWithImpl<$Res, _$_SettingDto>
-    implements _$$_SettingDtoCopyWith<$Res> {
-  __$$_SettingDtoCopyWithImpl(
-      _$_SettingDto _value, $Res Function(_$_SettingDto) _then)
-      : super(_value, _then);
+class __$$_SettingDtoCopyWithImpl<$Res> extends _$SettingDtoCopyWithImpl<$Res, _$_SettingDto> implements _$$_SettingDtoCopyWith<$Res> {
+  __$$_SettingDtoCopyWithImpl(_$_SettingDto _value, $Res Function(_$_SettingDto) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -119,11 +108,9 @@ class __$$_SettingDtoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SettingDto implements _SettingDto {
-  const _$_SettingDto(
-      {this.takingOrder = false, this.defaultTime = 0, this.notice});
+  const _$_SettingDto({this.takingOrder = false, this.defaultTime = 0, this.notice});
 
-  factory _$_SettingDto.fromJson(Map<String, dynamic> json) =>
-      _$$_SettingDtoFromJson(json);
+  factory _$_SettingDto.fromJson(Map<String, dynamic> json) => _$$_SettingDtoFromJson(json);
 
   @override
   @JsonKey()
@@ -144,23 +131,19 @@ class _$_SettingDto implements _SettingDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SettingDto &&
-            (identical(other.takingOrder, takingOrder) ||
-                other.takingOrder == takingOrder) &&
-            (identical(other.defaultTime, defaultTime) ||
-                other.defaultTime == defaultTime) &&
+            (identical(other.takingOrder, takingOrder) || other.takingOrder == takingOrder) &&
+            (identical(other.defaultTime, defaultTime) || other.defaultTime == defaultTime) &&
             (identical(other.notice, notice) || other.notice == notice));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, takingOrder, defaultTime, notice);
+  int get hashCode => Object.hash(runtimeType, takingOrder, defaultTime, notice);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SettingDtoCopyWith<_$_SettingDto> get copyWith =>
-      __$$_SettingDtoCopyWithImpl<_$_SettingDto>(this, _$identity);
+  _$$_SettingDtoCopyWith<_$_SettingDto> get copyWith => __$$_SettingDtoCopyWithImpl<_$_SettingDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -171,13 +154,9 @@ class _$_SettingDto implements _SettingDto {
 }
 
 abstract class _SettingDto implements SettingDto {
-  const factory _SettingDto(
-      {final bool takingOrder,
-      final int defaultTime,
-      final String? notice}) = _$_SettingDto;
+  const factory _SettingDto({final bool takingOrder, final int defaultTime, final String? notice}) = _$_SettingDto;
 
-  factory _SettingDto.fromJson(Map<String, dynamic> json) =
-      _$_SettingDto.fromJson;
+  factory _SettingDto.fromJson(Map<String, dynamic> json) = _$_SettingDto.fromJson;
 
   @override
   bool get takingOrder;
@@ -187,6 +166,5 @@ abstract class _SettingDto implements SettingDto {
   String? get notice;
   @override
   @JsonKey(ignore: true)
-  _$$_SettingDtoCopyWith<_$_SettingDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SettingDtoCopyWith<_$_SettingDto> get copyWith => throw _privateConstructorUsedError;
 }

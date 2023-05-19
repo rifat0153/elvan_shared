@@ -23,6 +23,5 @@ class AddOnDto with _$AddOnDto {
         Timestamp? createdAt,
   }) = _AddOnDto;
 
-  factory AddOnDto.fromJson(Map<String, dynamic> json) =>
-      _$AddOnDtoFromJson(json);
+  factory AddOnDto.fromJson(Map<String, dynamic> json) => _$AddOnDtoFromJson(json);
 }

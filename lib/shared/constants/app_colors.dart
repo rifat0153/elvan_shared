@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/foundation.dart' show immutable;
 import 'package:flutter/material.dart';
 
 @immutable

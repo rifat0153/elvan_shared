@@ -32,19 +32,13 @@ mixin _$CartDto {
 
 /// @nodoc
 abstract class $CartDtoCopyWith<$Res> {
-  factory $CartDtoCopyWith(CartDto value, $Res Function(CartDto) then) =
-      _$CartDtoCopyWithImpl<$Res, CartDto>;
+  factory $CartDtoCopyWith(CartDto value, $Res Function(CartDto) then) = _$CartDtoCopyWithImpl<$Res, CartDto>;
   @useResult
-  $Res call(
-      {String userId,
-      List<CartItemDto> cartItems,
-      double total,
-      double subTotal});
+  $Res call({String userId, List<CartItemDto> cartItems, double total, double subTotal});
 }
 
 /// @nodoc
-class _$CartDtoCopyWithImpl<$Res, $Val extends CartDto>
-    implements $CartDtoCopyWith<$Res> {
+class _$CartDtoCopyWithImpl<$Res, $Val extends CartDto> implements $CartDtoCopyWith<$Res> {
   _$CartDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -83,24 +77,15 @@ class _$CartDtoCopyWithImpl<$Res, $Val extends CartDto>
 
 /// @nodoc
 abstract class _$$_CartDtoCopyWith<$Res> implements $CartDtoCopyWith<$Res> {
-  factory _$$_CartDtoCopyWith(
-          _$_CartDto value, $Res Function(_$_CartDto) then) =
-      __$$_CartDtoCopyWithImpl<$Res>;
+  factory _$$_CartDtoCopyWith(_$_CartDto value, $Res Function(_$_CartDto) then) = __$$_CartDtoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String userId,
-      List<CartItemDto> cartItems,
-      double total,
-      double subTotal});
+  $Res call({String userId, List<CartItemDto> cartItems, double total, double subTotal});
 }
 
 /// @nodoc
-class __$$_CartDtoCopyWithImpl<$Res>
-    extends _$CartDtoCopyWithImpl<$Res, _$_CartDto>
-    implements _$$_CartDtoCopyWith<$Res> {
-  __$$_CartDtoCopyWithImpl(_$_CartDto _value, $Res Function(_$_CartDto) _then)
-      : super(_value, _then);
+class __$$_CartDtoCopyWithImpl<$Res> extends _$CartDtoCopyWithImpl<$Res, _$_CartDto> implements _$$_CartDtoCopyWith<$Res> {
+  __$$_CartDtoCopyWithImpl(_$_CartDto _value, $Res Function(_$_CartDto) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -135,16 +120,11 @@ class __$$_CartDtoCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_CartDto extends _CartDto {
-  const _$_CartDto(
-      {required this.userId,
-      final List<CartItemDto> cartItems = const [],
-      this.total = 0,
-      this.subTotal = 0})
+  const _$_CartDto({required this.userId, final List<CartItemDto> cartItems = const [], this.total = 0, this.subTotal = 0})
       : _cartItems = cartItems,
         super._();
 
-  factory _$_CartDto.fromJson(Map<String, dynamic> json) =>
-      _$$_CartDtoFromJson(json);
+  factory _$_CartDto.fromJson(Map<String, dynamic> json) => _$$_CartDtoFromJson(json);
 
   @override
   final String userId;
@@ -175,23 +155,19 @@ class _$_CartDto extends _CartDto {
         (other.runtimeType == runtimeType &&
             other is _$_CartDto &&
             (identical(other.userId, userId) || other.userId == userId) &&
-            const DeepCollectionEquality()
-                .equals(other._cartItems, _cartItems) &&
+            const DeepCollectionEquality().equals(other._cartItems, _cartItems) &&
             (identical(other.total, total) || other.total == total) &&
-            (identical(other.subTotal, subTotal) ||
-                other.subTotal == subTotal));
+            (identical(other.subTotal, subTotal) || other.subTotal == subTotal));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userId,
-      const DeepCollectionEquality().hash(_cartItems), total, subTotal);
+  int get hashCode => Object.hash(runtimeType, userId, const DeepCollectionEquality().hash(_cartItems), total, subTotal);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CartDtoCopyWith<_$_CartDto> get copyWith =>
-      __$$_CartDtoCopyWithImpl<_$_CartDto>(this, _$identity);
+  _$$_CartDtoCopyWith<_$_CartDto> get copyWith => __$$_CartDtoCopyWithImpl<_$_CartDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -202,11 +178,7 @@ class _$_CartDto extends _CartDto {
 }
 
 abstract class _CartDto extends CartDto {
-  const factory _CartDto(
-      {required final String userId,
-      final List<CartItemDto> cartItems,
-      final double total,
-      final double subTotal}) = _$_CartDto;
+  const factory _CartDto({required final String userId, final List<CartItemDto> cartItems, final double total, final double subTotal}) = _$_CartDto;
   const _CartDto._() : super._();
 
   factory _CartDto.fromJson(Map<String, dynamic> json) = _$_CartDto.fromJson;
@@ -221,6 +193,5 @@ abstract class _CartDto extends CartDto {
   double get subTotal;
   @override
   @JsonKey(ignore: true)
-  _$$_CartDtoCopyWith<_$_CartDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CartDtoCopyWith<_$_CartDto> get copyWith => throw _privateConstructorUsedError;
 }

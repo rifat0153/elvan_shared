@@ -12,16 +12,11 @@ _$_Category _$$_CategoryFromJson(Map<String, dynamic> json) => _$_Category(
       isSelected: json['isSelected'] as bool? ?? false,
       description: json['description'] as String?,
       imageUrl: json['imageUrl'] as String?,
-      buildSteps: (json['buildSteps'] as List<dynamic>?)
-              ?.map((e) => BuildStep.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      buildSteps: (json['buildSteps'] as List<dynamic>?)?.map((e) => BuildStep.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_CategoryToJson(_$_Category instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_CategoryToJson(_$_Category instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'isSelected': instance.isSelected,

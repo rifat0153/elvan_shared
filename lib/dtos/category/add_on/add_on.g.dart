@@ -14,8 +14,7 @@ _$_AddOn _$$_AddOnFromJson(Map<String, dynamic> json) => _$_AddOn(
       imageUrl: json['imageUrl'] as String?,
       isSelected: json['isSelected'] as bool? ?? false,
       quantitySelected: json['quantitySelected'] as int? ?? 0,
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
 Map<String, dynamic> _$$_AddOnToJson(_$_AddOn instance) => <String, dynamic>{

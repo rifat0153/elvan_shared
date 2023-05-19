@@ -27,8 +27,7 @@ class Category with _$Category {
         Timestamp? createdAt,
   }) = _Category;
 
-  factory Category.fromJson(Map<String, dynamic> json) =>
-      _$CategoryFromJson(json);
+  factory Category.fromJson(Map<String, dynamic> json) => _$CategoryFromJson(json);
 
   factory Category.fromDto(CategoryDto categoryDto) {
     return Category(
@@ -36,8 +35,7 @@ class Category with _$Category {
       title: categoryDto.title,
       description: categoryDto.description,
       imageUrl: categoryDto.imageUrl,
-      buildSteps:
-          categoryDto.buildSteps.map((e) => BuildStep.fromDto(e)).toList(),
+      buildSteps: categoryDto.buildSteps.map((e) => BuildStep.fromDto(e)).toList(),
       createdAt: categoryDto.createdAt,
     );
   }

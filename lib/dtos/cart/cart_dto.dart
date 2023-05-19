@@ -16,6 +16,5 @@ class CartDto with _$CartDto {
     @Default(0) double subTotal,
   }) = _CartDto;
 
-  factory CartDto.fromJson(Map<String, dynamic> json) =>
-      _$CartDtoFromJson(json);
+  factory CartDto.fromJson(Map<String, dynamic> json) => _$CartDtoFromJson(json);
 }

@@ -26,21 +26,17 @@ mixin _$AddOnDto {
   String? get imageUrl => throw _privateConstructorUsedError;
   bool get isSelected => throw _privateConstructorUsedError;
   int get quantitySelected => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AddOnDtoCopyWith<AddOnDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AddOnDtoCopyWith<AddOnDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AddOnDtoCopyWith<$Res> {
-  factory $AddOnDtoCopyWith(AddOnDto value, $Res Function(AddOnDto) then) =
-      _$AddOnDtoCopyWithImpl<$Res, AddOnDto>;
+  factory $AddOnDtoCopyWith(AddOnDto value, $Res Function(AddOnDto) then) = _$AddOnDtoCopyWithImpl<$Res, AddOnDto>;
   @useResult
   $Res call(
       {String? id,
@@ -49,13 +45,11 @@ abstract class $AddOnDtoCopyWith<$Res> {
       String? imageUrl,
       bool isSelected,
       int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$AddOnDtoCopyWithImpl<$Res, $Val extends AddOnDto>
-    implements $AddOnDtoCopyWith<$Res> {
+class _$AddOnDtoCopyWithImpl<$Res, $Val extends AddOnDto> implements $AddOnDtoCopyWith<$Res> {
   _$AddOnDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -109,9 +103,7 @@ class _$AddOnDtoCopyWithImpl<$Res, $Val extends AddOnDto>
 
 /// @nodoc
 abstract class _$$_AddOnDtoCopyWith<$Res> implements $AddOnDtoCopyWith<$Res> {
-  factory _$$_AddOnDtoCopyWith(
-          _$_AddOnDto value, $Res Function(_$_AddOnDto) then) =
-      __$$_AddOnDtoCopyWithImpl<$Res>;
+  factory _$$_AddOnDtoCopyWith(_$_AddOnDto value, $Res Function(_$_AddOnDto) then) = __$$_AddOnDtoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,17 +113,12 @@ abstract class _$$_AddOnDtoCopyWith<$Res> implements $AddOnDtoCopyWith<$Res> {
       String? imageUrl,
       bool isSelected,
       int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_AddOnDtoCopyWithImpl<$Res>
-    extends _$AddOnDtoCopyWithImpl<$Res, _$_AddOnDto>
-    implements _$$_AddOnDtoCopyWith<$Res> {
-  __$$_AddOnDtoCopyWithImpl(
-      _$_AddOnDto _value, $Res Function(_$_AddOnDto) _then)
-      : super(_value, _then);
+class __$$_AddOnDtoCopyWithImpl<$Res> extends _$AddOnDtoCopyWithImpl<$Res, _$_AddOnDto> implements _$$_AddOnDtoCopyWith<$Res> {
+  __$$_AddOnDtoCopyWithImpl(_$_AddOnDto _value, $Res Function(_$_AddOnDto) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -187,11 +174,9 @@ class _$_AddOnDto implements _AddOnDto {
       this.imageUrl,
       this.isSelected = false,
       this.quantitySelected = 0,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt});
 
-  factory _$_AddOnDto.fromJson(Map<String, dynamic> json) =>
-      _$$_AddOnDtoFromJson(json);
+  factory _$_AddOnDto.fromJson(Map<String, dynamic> json) => _$$_AddOnDtoFromJson(json);
 
   @override
   final String? id;
@@ -208,9 +193,7 @@ class _$_AddOnDto implements _AddOnDto {
   @JsonKey()
   final int quantitySelected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -226,26 +209,20 @@ class _$_AddOnDto implements _AddOnDto {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
-            (identical(other.isSelected, isSelected) ||
-                other.isSelected == isSelected) &&
-            (identical(other.quantitySelected, quantitySelected) ||
-                other.quantitySelected == quantitySelected) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
+            (identical(other.isSelected, isSelected) || other.isSelected == isSelected) &&
+            (identical(other.quantitySelected, quantitySelected) || other.quantitySelected == quantitySelected) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, price, imageUrl,
-      isSelected, quantitySelected, createdAt);
+  int get hashCode => Object.hash(runtimeType, id, title, price, imageUrl, isSelected, quantitySelected, createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddOnDtoCopyWith<_$_AddOnDto> get copyWith =>
-      __$$_AddOnDtoCopyWithImpl<_$_AddOnDto>(this, _$identity);
+  _$$_AddOnDtoCopyWith<_$_AddOnDto> get copyWith => __$$_AddOnDtoCopyWithImpl<_$_AddOnDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -263,8 +240,7 @@ abstract class _AddOnDto implements AddOnDto {
       final String? imageUrl,
       final bool isSelected,
       final int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_AddOnDto;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_AddOnDto;
 
   factory _AddOnDto.fromJson(Map<String, dynamic> json) = _$_AddOnDto.fromJson;
 
@@ -281,12 +257,9 @@ abstract class _AddOnDto implements AddOnDto {
   @override
   int get quantitySelected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_AddOnDtoCopyWith<_$_AddOnDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AddOnDtoCopyWith<_$_AddOnDto> get copyWith => throw _privateConstructorUsedError;
 }

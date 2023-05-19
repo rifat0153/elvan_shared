@@ -7,8 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'food_item_dto.freezed.dart';
 part 'food_item_dto.g.dart';
 
-FoodItemDto foodItemDtoFromJson(String str) =>
-    FoodItemDto.fromJson(json.decode(str));
+FoodItemDto foodItemDtoFromJson(String str) => FoodItemDto.fromJson(json.decode(str));
 String foodItemDtoToJson(FoodItemDto data) => json.encode(data.toJson());
 
 @Freezed()
@@ -45,6 +44,5 @@ class FoodItemDto with _$FoodItemDto {
         Timestamp? createdAt,
   }) = _FoodItemDto;
 
-  factory FoodItemDto.fromJson(Map<String, dynamic> json) =>
-      _$FoodItemDtoFromJson(json);
+  factory FoodItemDto.fromJson(Map<String, dynamic> json) => _$FoodItemDtoFromJson(json);
 }

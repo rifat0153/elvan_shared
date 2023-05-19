@@ -6,8 +6,7 @@ part of 'elvan_user_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ElvanUserDto _$$_ElvanUserDtoFromJson(Map<String, dynamic> json) =>
-    _$_ElvanUserDto(
+_$_ElvanUserDto _$$_ElvanUserDtoFromJson(Map<String, dynamic> json) => _$_ElvanUserDto(
       id: json['id'] as String?,
       uid: json['uid'] as String?,
       name: json['name'] as String?,
@@ -22,12 +21,10 @@ _$_ElvanUserDto _$$_ElvanUserDtoFromJson(Map<String, dynamic> json) =>
       totalOrdersDelivered: json['totalOrdersDelivered'] as int? ?? 0,
       totalOrdersPending: json['totalOrdersPending'] as int? ?? 0,
       totalOrdersRejected: json['totalOrdersRejected'] as int? ?? 0,
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_ElvanUserDtoToJson(_$_ElvanUserDto instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_ElvanUserDtoToJson(_$_ElvanUserDto instance) => <String, dynamic>{
       'id': instance.id,
       'uid': instance.uid,
       'name': instance.name,

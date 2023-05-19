@@ -26,21 +26,17 @@ mixin _$Category {
   String? get description => throw _privateConstructorUsedError;
   String? get imageUrl => throw _privateConstructorUsedError;
   List<BuildStep> get buildSteps => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CategoryCopyWith<Category> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CategoryCopyWith<Category> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CategoryCopyWith<$Res> {
-  factory $CategoryCopyWith(Category value, $Res Function(Category) then) =
-      _$CategoryCopyWithImpl<$Res, Category>;
+  factory $CategoryCopyWith(Category value, $Res Function(Category) then) = _$CategoryCopyWithImpl<$Res, Category>;
   @useResult
   $Res call(
       {String? id,
@@ -49,13 +45,11 @@ abstract class $CategoryCopyWith<$Res> {
       String? description,
       String? imageUrl,
       List<BuildStep> buildSteps,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$CategoryCopyWithImpl<$Res, $Val extends Category>
-    implements $CategoryCopyWith<$Res> {
+class _$CategoryCopyWithImpl<$Res, $Val extends Category> implements $CategoryCopyWith<$Res> {
   _$CategoryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -109,9 +103,7 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
 
 /// @nodoc
 abstract class _$$_CategoryCopyWith<$Res> implements $CategoryCopyWith<$Res> {
-  factory _$$_CategoryCopyWith(
-          _$_Category value, $Res Function(_$_Category) then) =
-      __$$_CategoryCopyWithImpl<$Res>;
+  factory _$$_CategoryCopyWith(_$_Category value, $Res Function(_$_Category) then) = __$$_CategoryCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,17 +113,12 @@ abstract class _$$_CategoryCopyWith<$Res> implements $CategoryCopyWith<$Res> {
       String? description,
       String? imageUrl,
       List<BuildStep> buildSteps,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_CategoryCopyWithImpl<$Res>
-    extends _$CategoryCopyWithImpl<$Res, _$_Category>
-    implements _$$_CategoryCopyWith<$Res> {
-  __$$_CategoryCopyWithImpl(
-      _$_Category _value, $Res Function(_$_Category) _then)
-      : super(_value, _then);
+class __$$_CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res, _$_Category> implements _$$_CategoryCopyWith<$Res> {
+  __$$_CategoryCopyWithImpl(_$_Category _value, $Res Function(_$_Category) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -188,13 +175,11 @@ class _$_Category extends _Category {
       this.description,
       this.imageUrl,
       final List<BuildStep> buildSteps = const [],
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : _buildSteps = buildSteps,
         super._();
 
-  factory _$_Category.fromJson(Map<String, dynamic> json) =>
-      _$$_CategoryFromJson(json);
+  factory _$_Category.fromJson(Map<String, dynamic> json) => _$$_CategoryFromJson(json);
 
   @override
   final String? id;
@@ -217,9 +202,7 @@ class _$_Category extends _Category {
   }
 
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -234,35 +217,21 @@ class _$_Category extends _Category {
             other is _$_Category &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.isSelected, isSelected) ||
-                other.isSelected == isSelected) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
-            const DeepCollectionEquality()
-                .equals(other._buildSteps, _buildSteps) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.isSelected, isSelected) || other.isSelected == isSelected) &&
+            (identical(other.description, description) || other.description == description) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
+            const DeepCollectionEquality().equals(other._buildSteps, _buildSteps) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      isSelected,
-      description,
-      imageUrl,
-      const DeepCollectionEquality().hash(_buildSteps),
-      createdAt);
+  int get hashCode => Object.hash(runtimeType, id, title, isSelected, description, imageUrl, const DeepCollectionEquality().hash(_buildSteps), createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CategoryCopyWith<_$_Category> get copyWith =>
-      __$$_CategoryCopyWithImpl<_$_Category>(this, _$identity);
+  _$$_CategoryCopyWith<_$_Category> get copyWith => __$$_CategoryCopyWithImpl<_$_Category>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -280,8 +249,7 @@ abstract class _Category extends Category {
       final String? description,
       final String? imageUrl,
       final List<BuildStep> buildSteps,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_Category;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_Category;
   const _Category._() : super._();
 
   factory _Category.fromJson(Map<String, dynamic> json) = _$_Category.fromJson;
@@ -299,12 +267,9 @@ abstract class _Category extends Category {
   @override
   List<BuildStep> get buildSteps;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_CategoryCopyWith<_$_Category> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CategoryCopyWith<_$_Category> get copyWith => throw _privateConstructorUsedError;
 }

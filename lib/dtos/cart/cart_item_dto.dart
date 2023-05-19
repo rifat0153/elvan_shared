@@ -30,6 +30,5 @@ class CartItemDto with _$CartItemDto {
         Timestamp? createdAt,
   }) = _CartItem;
 
-  factory CartItemDto.fromJson(Map<String, dynamic> json) =>
-      _$CartItemDtoFromJson(json);
+  factory CartItemDto.fromJson(Map<String, dynamic> json) => _$CartItemDtoFromJson(json);
 }

@@ -18,29 +18,16 @@ _$_FoodItem _$$_FoodItemFromJson(Map<String, dynamic> json) => _$_FoodItem(
       imageUrl: json['imageUrl'] as String?,
       isFavorite: json['isFavorite'] as bool? ?? false,
       quantity: json['quantity'] as int? ?? 0,
-      tags:
-          (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
-      ingredients: (json['ingredients'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      buildStepsOverrides: (json['buildStepsOverrides'] as List<dynamic>?)
-              ?.map((e) => BuildStep.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      allergens: (json['allergens'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
+      tags: (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+      ingredients: (json['ingredients'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+      buildStepsOverrides: (json['buildStepsOverrides'] as List<dynamic>?)?.map((e) => BuildStep.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
+      allergens: (json['allergens'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
       timeToPrepareInMinutes: json['timeToPrepareInMinutes'] as int?,
       isAvailable: json['isAvailable'] as bool? ?? false,
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_FoodItemToJson(_$_FoodItem instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_FoodItemToJson(_$_FoodItem instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'price': instance.price,
@@ -54,8 +41,7 @@ Map<String, dynamic> _$$_FoodItemToJson(_$_FoodItem instance) =>
       'quantity': instance.quantity,
       'tags': instance.tags,
       'ingredients': instance.ingredients,
-      'buildStepsOverrides':
-          instance.buildStepsOverrides.map((e) => e.toJson()).toList(),
+      'buildStepsOverrides': instance.buildStepsOverrides.map((e) => e.toJson()).toList(),
       'allergens': instance.allergens,
       'timeToPrepareInMinutes': instance.timeToPrepareInMinutes,
       'isAvailable': instance.isAvailable,

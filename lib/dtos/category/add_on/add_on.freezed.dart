@@ -27,9 +27,7 @@ mixin _$AddOn {
   String? get imageUrl => throw _privateConstructorUsedError;
   bool get isSelected => throw _privateConstructorUsedError;
   int get quantitySelected => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,8 +37,7 @@ mixin _$AddOn {
 
 /// @nodoc
 abstract class $AddOnCopyWith<$Res> {
-  factory $AddOnCopyWith(AddOn value, $Res Function(AddOn) then) =
-      _$AddOnCopyWithImpl<$Res, AddOn>;
+  factory $AddOnCopyWith(AddOn value, $Res Function(AddOn) then) = _$AddOnCopyWithImpl<$Res, AddOn>;
   @useResult
   $Res call(
       {String? id,
@@ -50,13 +47,11 @@ abstract class $AddOnCopyWith<$Res> {
       String? imageUrl,
       bool isSelected,
       int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$AddOnCopyWithImpl<$Res, $Val extends AddOn>
-    implements $AddOnCopyWith<$Res> {
+class _$AddOnCopyWithImpl<$Res, $Val extends AddOn> implements $AddOnCopyWith<$Res> {
   _$AddOnCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -115,8 +110,7 @@ class _$AddOnCopyWithImpl<$Res, $Val extends AddOn>
 
 /// @nodoc
 abstract class _$$_AddOnCopyWith<$Res> implements $AddOnCopyWith<$Res> {
-  factory _$$_AddOnCopyWith(_$_AddOn value, $Res Function(_$_AddOn) then) =
-      __$$_AddOnCopyWithImpl<$Res>;
+  factory _$$_AddOnCopyWith(_$_AddOn value, $Res Function(_$_AddOn) then) = __$$_AddOnCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,15 +121,12 @@ abstract class _$$_AddOnCopyWith<$Res> implements $AddOnCopyWith<$Res> {
       String? imageUrl,
       bool isSelected,
       int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_AddOnCopyWithImpl<$Res> extends _$AddOnCopyWithImpl<$Res, _$_AddOn>
-    implements _$$_AddOnCopyWith<$Res> {
-  __$$_AddOnCopyWithImpl(_$_AddOn _value, $Res Function(_$_AddOn) _then)
-      : super(_value, _then);
+class __$$_AddOnCopyWithImpl<$Res> extends _$AddOnCopyWithImpl<$Res, _$_AddOn> implements _$$_AddOnCopyWith<$Res> {
+  __$$_AddOnCopyWithImpl(_$_AddOn _value, $Res Function(_$_AddOn) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -197,12 +188,10 @@ class _$_AddOn extends _AddOn {
       this.imageUrl,
       this.isSelected = false,
       this.quantitySelected = 0,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : super._();
 
-  factory _$_AddOn.fromJson(Map<String, dynamic> json) =>
-      _$$_AddOnFromJson(json);
+  factory _$_AddOn.fromJson(Map<String, dynamic> json) => _$$_AddOnFromJson(json);
 
   @override
   final String? id;
@@ -222,9 +211,7 @@ class _$_AddOn extends _AddOn {
   @JsonKey()
   final int quantitySelected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -240,28 +227,21 @@ class _$_AddOn extends _AddOn {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.includeInPrice, includeInPrice) ||
-                other.includeInPrice == includeInPrice) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
-            (identical(other.isSelected, isSelected) ||
-                other.isSelected == isSelected) &&
-            (identical(other.quantitySelected, quantitySelected) ||
-                other.quantitySelected == quantitySelected) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.includeInPrice, includeInPrice) || other.includeInPrice == includeInPrice) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
+            (identical(other.isSelected, isSelected) || other.isSelected == isSelected) &&
+            (identical(other.quantitySelected, quantitySelected) || other.quantitySelected == quantitySelected) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, price, includeInPrice,
-      imageUrl, isSelected, quantitySelected, createdAt);
+  int get hashCode => Object.hash(runtimeType, id, title, price, includeInPrice, imageUrl, isSelected, quantitySelected, createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddOnCopyWith<_$_AddOn> get copyWith =>
-      __$$_AddOnCopyWithImpl<_$_AddOn>(this, _$identity);
+  _$$_AddOnCopyWith<_$_AddOn> get copyWith => __$$_AddOnCopyWithImpl<_$_AddOn>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -280,8 +260,7 @@ abstract class _AddOn extends AddOn {
       final String? imageUrl,
       final bool isSelected,
       final int quantitySelected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_AddOn;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_AddOn;
   const _AddOn._() : super._();
 
   factory _AddOn.fromJson(Map<String, dynamic> json) = _$_AddOn.fromJson;
@@ -301,12 +280,9 @@ abstract class _AddOn extends AddOn {
   @override
   int get quantitySelected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_AddOnCopyWith<_$_AddOn> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AddOnCopyWith<_$_AddOn> get copyWith => throw _privateConstructorUsedError;
 }

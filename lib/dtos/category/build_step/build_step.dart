@@ -92,8 +92,7 @@ class BuildStep with _$BuildStep {
         maxSelectedAddOns;
   }
 
-  factory BuildStep.fromJson(Map<String, dynamic> json) =>
-      _$BuildStepFromJson(json);
+  factory BuildStep.fromJson(Map<String, dynamic> json) => _$BuildStepFromJson(json);
 
   factory BuildStep.fromDto(BuildStepDto dto) {
     return BuildStep(

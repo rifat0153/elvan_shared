@@ -13,12 +13,10 @@ _$_AddOnDto _$$_AddOnDtoFromJson(Map<String, dynamic> json) => _$_AddOnDto(
       imageUrl: json['imageUrl'] as String?,
       isSelected: json['isSelected'] as bool? ?? false,
       quantitySelected: json['quantitySelected'] as int? ?? 0,
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_AddOnDtoToJson(_$_AddOnDto instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_AddOnDtoToJson(_$_AddOnDto instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'price': instance.price,

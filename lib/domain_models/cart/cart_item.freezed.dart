@@ -27,21 +27,17 @@ mixin _$CartItem {
   int get quantity => throw _privateConstructorUsedError;
   double? get discount => throw _privateConstructorUsedError;
   List<String> get instructions => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CartItemCopyWith<CartItem> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CartItemCopyWith<CartItem> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CartItemCopyWith<$Res> {
-  factory $CartItemCopyWith(CartItem value, $Res Function(CartItem) then) =
-      _$CartItemCopyWithImpl<$Res, CartItem>;
+  factory $CartItemCopyWith(CartItem value, $Res Function(CartItem) then) = _$CartItemCopyWithImpl<$Res, CartItem>;
   @useResult
   $Res call(
       {String id,
@@ -51,15 +47,13 @@ abstract class $CartItemCopyWith<$Res> {
       int quantity,
       double? discount,
       List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 
   $FoodItemCopyWith<$Res> get foodItem;
 }
 
 /// @nodoc
-class _$CartItemCopyWithImpl<$Res, $Val extends CartItem>
-    implements $CartItemCopyWith<$Res> {
+class _$CartItemCopyWithImpl<$Res, $Val extends CartItem> implements $CartItemCopyWith<$Res> {
   _$CartItemCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -126,9 +120,7 @@ class _$CartItemCopyWithImpl<$Res, $Val extends CartItem>
 
 /// @nodoc
 abstract class _$$_CartItemCopyWith<$Res> implements $CartItemCopyWith<$Res> {
-  factory _$$_CartItemCopyWith(
-          _$_CartItem value, $Res Function(_$_CartItem) then) =
-      __$$_CartItemCopyWithImpl<$Res>;
+  factory _$$_CartItemCopyWith(_$_CartItem value, $Res Function(_$_CartItem) then) = __$$_CartItemCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,20 +131,15 @@ abstract class _$$_CartItemCopyWith<$Res> implements $CartItemCopyWith<$Res> {
       int quantity,
       double? discount,
       List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 
   @override
   $FoodItemCopyWith<$Res> get foodItem;
 }
 
 /// @nodoc
-class __$$_CartItemCopyWithImpl<$Res>
-    extends _$CartItemCopyWithImpl<$Res, _$_CartItem>
-    implements _$$_CartItemCopyWith<$Res> {
-  __$$_CartItemCopyWithImpl(
-      _$_CartItem _value, $Res Function(_$_CartItem) _then)
-      : super(_value, _then);
+class __$$_CartItemCopyWithImpl<$Res> extends _$CartItemCopyWithImpl<$Res, _$_CartItem> implements _$$_CartItemCopyWith<$Res> {
+  __$$_CartItemCopyWithImpl(_$_CartItem _value, $Res Function(_$_CartItem) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -215,14 +202,12 @@ class _$_CartItem extends _CartItem {
       required this.quantity,
       this.discount,
       final List<String> instructions = const [],
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : _buildSteps = buildSteps,
         _instructions = instructions,
         super._();
 
-  factory _$_CartItem.fromJson(Map<String, dynamic> json) =>
-      _$$_CartItemFromJson(json);
+  factory _$_CartItem.fromJson(Map<String, dynamic> json) => _$$_CartItemFromJson(json);
 
   @override
   final String id;
@@ -252,9 +237,7 @@ class _$_CartItem extends _CartItem {
   }
 
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -268,39 +251,24 @@ class _$_CartItem extends _CartItem {
         (other.runtimeType == runtimeType &&
             other is _$_CartItem &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.foodItem, foodItem) ||
-                other.foodItem == foodItem) &&
-            const DeepCollectionEquality()
-                .equals(other._buildSteps, _buildSteps) &&
+            (identical(other.foodItem, foodItem) || other.foodItem == foodItem) &&
+            const DeepCollectionEquality().equals(other._buildSteps, _buildSteps) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
-            (identical(other.discount, discount) ||
-                other.discount == discount) &&
-            const DeepCollectionEquality()
-                .equals(other._instructions, _instructions) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.quantity, quantity) || other.quantity == quantity) &&
+            (identical(other.discount, discount) || other.discount == discount) &&
+            const DeepCollectionEquality().equals(other._instructions, _instructions) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      foodItem,
-      const DeepCollectionEquality().hash(_buildSteps),
-      price,
-      quantity,
-      discount,
-      const DeepCollectionEquality().hash(_instructions),
-      createdAt);
+  int get hashCode =>
+      Object.hash(runtimeType, id, foodItem, const DeepCollectionEquality().hash(_buildSteps), price, quantity, discount, const DeepCollectionEquality().hash(_instructions), createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CartItemCopyWith<_$_CartItem> get copyWith =>
-      __$$_CartItemCopyWithImpl<_$_CartItem>(this, _$identity);
+  _$$_CartItemCopyWith<_$_CartItem> get copyWith => __$$_CartItemCopyWithImpl<_$_CartItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -319,8 +287,7 @@ abstract class _CartItem extends CartItem {
       required final int quantity,
       final double? discount,
       final List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_CartItem;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_CartItem;
   const _CartItem._() : super._();
 
   factory _CartItem.fromJson(Map<String, dynamic> json) = _$_CartItem.fromJson;
@@ -340,12 +307,9 @@ abstract class _CartItem extends CartItem {
   @override
   List<String> get instructions;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_CartItemCopyWith<_$_CartItem> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CartItemCopyWith<_$_CartItem> get copyWith => throw _privateConstructorUsedError;
 }

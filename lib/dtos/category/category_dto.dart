@@ -23,6 +23,5 @@ abstract class CategoryDto with _$CategoryDto {
         Timestamp? createdAt,
   }) = _CategoryDto;
 
-  factory CategoryDto.fromJson(Map<String, dynamic> json) =>
-      _$CategoryDtoFromJson(json);
+  factory CategoryDto.fromJson(Map<String, dynamic> json) => _$CategoryDtoFromJson(json);
 }

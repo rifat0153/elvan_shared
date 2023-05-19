@@ -34,22 +34,17 @@ mixin _$ElvanUserDto {
   int get totalOrdersDelivered => throw _privateConstructorUsedError;
   int get totalOrdersPending => throw _privateConstructorUsedError;
   int get totalOrdersRejected => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ElvanUserDtoCopyWith<ElvanUserDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ElvanUserDtoCopyWith<ElvanUserDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ElvanUserDtoCopyWith<$Res> {
-  factory $ElvanUserDtoCopyWith(
-          ElvanUserDto value, $Res Function(ElvanUserDto) then) =
-      _$ElvanUserDtoCopyWithImpl<$Res, ElvanUserDto>;
+  factory $ElvanUserDtoCopyWith(ElvanUserDto value, $Res Function(ElvanUserDto) then) = _$ElvanUserDtoCopyWithImpl<$Res, ElvanUserDto>;
   @useResult
   $Res call(
       {String? id,
@@ -66,13 +61,11 @@ abstract class $ElvanUserDtoCopyWith<$Res> {
       int totalOrdersDelivered,
       int totalOrdersPending,
       int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$ElvanUserDtoCopyWithImpl<$Res, $Val extends ElvanUserDto>
-    implements $ElvanUserDtoCopyWith<$Res> {
+class _$ElvanUserDtoCopyWithImpl<$Res, $Val extends ElvanUserDto> implements $ElvanUserDtoCopyWith<$Res> {
   _$ElvanUserDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -165,11 +158,8 @@ class _$ElvanUserDtoCopyWithImpl<$Res, $Val extends ElvanUserDto>
 }
 
 /// @nodoc
-abstract class _$$_ElvanUserDtoCopyWith<$Res>
-    implements $ElvanUserDtoCopyWith<$Res> {
-  factory _$$_ElvanUserDtoCopyWith(
-          _$_ElvanUserDto value, $Res Function(_$_ElvanUserDto) then) =
-      __$$_ElvanUserDtoCopyWithImpl<$Res>;
+abstract class _$$_ElvanUserDtoCopyWith<$Res> implements $ElvanUserDtoCopyWith<$Res> {
+  factory _$$_ElvanUserDtoCopyWith(_$_ElvanUserDto value, $Res Function(_$_ElvanUserDto) then) = __$$_ElvanUserDtoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -187,17 +177,12 @@ abstract class _$$_ElvanUserDtoCopyWith<$Res>
       int totalOrdersDelivered,
       int totalOrdersPending,
       int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_ElvanUserDtoCopyWithImpl<$Res>
-    extends _$ElvanUserDtoCopyWithImpl<$Res, _$_ElvanUserDto>
-    implements _$$_ElvanUserDtoCopyWith<$Res> {
-  __$$_ElvanUserDtoCopyWithImpl(
-      _$_ElvanUserDto _value, $Res Function(_$_ElvanUserDto) _then)
-      : super(_value, _then);
+class __$$_ElvanUserDtoCopyWithImpl<$Res> extends _$ElvanUserDtoCopyWithImpl<$Res, _$_ElvanUserDto> implements _$$_ElvanUserDtoCopyWith<$Res> {
+  __$$_ElvanUserDtoCopyWithImpl(_$_ElvanUserDto _value, $Res Function(_$_ElvanUserDto) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -301,11 +286,9 @@ class _$_ElvanUserDto implements _ElvanUserDto {
       this.totalOrdersDelivered = 0,
       this.totalOrdersPending = 0,
       this.totalOrdersRejected = 0,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt});
 
-  factory _$_ElvanUserDto.fromJson(Map<String, dynamic> json) =>
-      _$$_ElvanUserDtoFromJson(json);
+  factory _$_ElvanUserDto.fromJson(Map<String, dynamic> json) => _$$_ElvanUserDtoFromJson(json);
 
   @override
   final String? id;
@@ -342,9 +325,7 @@ class _$_ElvanUserDto implements _ElvanUserDto {
   @JsonKey()
   final int totalOrdersRejected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -361,52 +342,28 @@ class _$_ElvanUserDto implements _ElvanUserDto {
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.role, role) || other.role == role) &&
-            (identical(other.totalSpent, totalSpent) ||
-                other.totalSpent == totalSpent) &&
-            (identical(other.totalOrders, totalOrders) ||
-                other.totalOrders == totalOrders) &&
-            (identical(other.totalOrdersCancelled, totalOrdersCancelled) ||
-                other.totalOrdersCancelled == totalOrdersCancelled) &&
-            (identical(other.totalOrdersDelivered, totalOrdersDelivered) ||
-                other.totalOrdersDelivered == totalOrdersDelivered) &&
-            (identical(other.totalOrdersPending, totalOrdersPending) ||
-                other.totalOrdersPending == totalOrdersPending) &&
-            (identical(other.totalOrdersRejected, totalOrdersRejected) ||
-                other.totalOrdersRejected == totalOrdersRejected) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.totalSpent, totalSpent) || other.totalSpent == totalSpent) &&
+            (identical(other.totalOrders, totalOrders) || other.totalOrders == totalOrders) &&
+            (identical(other.totalOrdersCancelled, totalOrdersCancelled) || other.totalOrdersCancelled == totalOrdersCancelled) &&
+            (identical(other.totalOrdersDelivered, totalOrdersDelivered) || other.totalOrdersDelivered == totalOrdersDelivered) &&
+            (identical(other.totalOrdersPending, totalOrdersPending) || other.totalOrdersPending == totalOrdersPending) &&
+            (identical(other.totalOrdersRejected, totalOrdersRejected) || other.totalOrdersRejected == totalOrdersRejected) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      uid,
-      name,
-      email,
-      imageUrl,
-      phone,
-      address,
-      role,
-      totalSpent,
-      totalOrders,
-      totalOrdersCancelled,
-      totalOrdersDelivered,
-      totalOrdersPending,
-      totalOrdersRejected,
-      createdAt);
+      runtimeType, id, uid, name, email, imageUrl, phone, address, role, totalSpent, totalOrders, totalOrdersCancelled, totalOrdersDelivered, totalOrdersPending, totalOrdersRejected, createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ElvanUserDtoCopyWith<_$_ElvanUserDto> get copyWith =>
-      __$$_ElvanUserDtoCopyWithImpl<_$_ElvanUserDto>(this, _$identity);
+  _$$_ElvanUserDtoCopyWith<_$_ElvanUserDto> get copyWith => __$$_ElvanUserDtoCopyWithImpl<_$_ElvanUserDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -432,11 +389,9 @@ abstract class _ElvanUserDto implements ElvanUserDto {
       final int totalOrdersDelivered,
       final int totalOrdersPending,
       final int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_ElvanUserDto;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_ElvanUserDto;
 
-  factory _ElvanUserDto.fromJson(Map<String, dynamic> json) =
-      _$_ElvanUserDto.fromJson;
+  factory _ElvanUserDto.fromJson(Map<String, dynamic> json) = _$_ElvanUserDto.fromJson;
 
   @override
   String? get id;
@@ -467,12 +422,9 @@ abstract class _ElvanUserDto implements ElvanUserDto {
   @override
   int get totalOrdersRejected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_ElvanUserDtoCopyWith<_$_ElvanUserDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElvanUserDtoCopyWith<_$_ElvanUserDto> get copyWith => throw _privateConstructorUsedError;
 }

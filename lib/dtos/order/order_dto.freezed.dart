@@ -30,27 +30,21 @@ mixin _$OrderDto {
   OrderStatusDto get status => throw _privateConstructorUsedError;
   String? get paymentMethod => throw _privateConstructorUsedError;
   String? get paymentStatus => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get orderAcceptedAt => throw _privateConstructorUsedError;
   int? get orderPreparationTime => throw _privateConstructorUsedError;
   List<String> get instructions => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OrderDtoCopyWith<OrderDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $OrderDtoCopyWith<OrderDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OrderDtoCopyWith<$Res> {
-  factory $OrderDtoCopyWith(OrderDto value, $Res Function(OrderDto) then) =
-      _$OrderDtoCopyWithImpl<$Res, OrderDto>;
+  factory $OrderDtoCopyWith(OrderDto value, $Res Function(OrderDto) then) = _$OrderDtoCopyWithImpl<$Res, OrderDto>;
   @useResult
   $Res call(
       {String id,
@@ -59,21 +53,17 @@ abstract class $OrderDtoCopyWith<$Res> {
       double total,
       double subTotal,
       double discount,
-      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson)
-          OrderStatusDto status,
+      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson) OrderStatusDto status,
       String? paymentMethod,
       String? paymentStatus,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? orderAcceptedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? orderAcceptedAt,
       int? orderPreparationTime,
       List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$OrderDtoCopyWithImpl<$Res, $Val extends OrderDto>
-    implements $OrderDtoCopyWith<$Res> {
+class _$OrderDtoCopyWithImpl<$Res, $Val extends OrderDto> implements $OrderDtoCopyWith<$Res> {
   _$OrderDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -157,8 +147,7 @@ class _$OrderDtoCopyWithImpl<$Res, $Val extends OrderDto>
 
 /// @nodoc
 abstract class _$$_OrderCopyWith<$Res> implements $OrderDtoCopyWith<$Res> {
-  factory _$$_OrderCopyWith(_$_Order value, $Res Function(_$_Order) then) =
-      __$$_OrderCopyWithImpl<$Res>;
+  factory _$$_OrderCopyWith(_$_Order value, $Res Function(_$_Order) then) = __$$_OrderCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -168,24 +157,18 @@ abstract class _$$_OrderCopyWith<$Res> implements $OrderDtoCopyWith<$Res> {
       double total,
       double subTotal,
       double discount,
-      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson)
-          OrderStatusDto status,
+      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson) OrderStatusDto status,
       String? paymentMethod,
       String? paymentStatus,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? orderAcceptedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? orderAcceptedAt,
       int? orderPreparationTime,
       List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_OrderCopyWithImpl<$Res>
-    extends _$OrderDtoCopyWithImpl<$Res, _$_Order>
-    implements _$$_OrderCopyWith<$Res> {
-  __$$_OrderCopyWithImpl(_$_Order _value, $Res Function(_$_Order) _then)
-      : super(_value, _then);
+class __$$_OrderCopyWithImpl<$Res> extends _$OrderDtoCopyWithImpl<$Res, _$_Order> implements _$$_OrderCopyWith<$Res> {
+  __$$_OrderCopyWithImpl(_$_Order _value, $Res Function(_$_Order) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -272,21 +255,17 @@ class _$_Order implements _Order {
       required this.total,
       required this.subTotal,
       this.discount = 0,
-      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson)
-          required this.status,
+      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson) required this.status,
       this.paymentMethod,
       this.paymentStatus,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.orderAcceptedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.orderAcceptedAt,
       this.orderPreparationTime,
       final List<String> instructions = const [],
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : _items = items,
         _instructions = instructions;
 
-  factory _$_Order.fromJson(Map<String, dynamic> json) =>
-      _$$_OrderFromJson(json);
+  factory _$_Order.fromJson(Map<String, dynamic> json) => _$$_OrderFromJson(json);
 
   @override
   final String id;
@@ -316,9 +295,7 @@ class _$_Order implements _Order {
   @override
   final String? paymentStatus;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? orderAcceptedAt;
   @override
   final int? orderPreparationTime;
@@ -332,9 +309,7 @@ class _$_Order implements _Order {
   }
 
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -351,48 +326,26 @@ class _$_Order implements _Order {
             (identical(other.userId, userId) || other.userId == userId) &&
             const DeepCollectionEquality().equals(other._items, _items) &&
             (identical(other.total, total) || other.total == total) &&
-            (identical(other.subTotal, subTotal) ||
-                other.subTotal == subTotal) &&
-            (identical(other.discount, discount) ||
-                other.discount == discount) &&
+            (identical(other.subTotal, subTotal) || other.subTotal == subTotal) &&
+            (identical(other.discount, discount) || other.discount == discount) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.paymentMethod, paymentMethod) ||
-                other.paymentMethod == paymentMethod) &&
-            (identical(other.paymentStatus, paymentStatus) ||
-                other.paymentStatus == paymentStatus) &&
-            (identical(other.orderAcceptedAt, orderAcceptedAt) ||
-                other.orderAcceptedAt == orderAcceptedAt) &&
-            (identical(other.orderPreparationTime, orderPreparationTime) ||
-                other.orderPreparationTime == orderPreparationTime) &&
-            const DeepCollectionEquality()
-                .equals(other._instructions, _instructions) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.paymentMethod, paymentMethod) || other.paymentMethod == paymentMethod) &&
+            (identical(other.paymentStatus, paymentStatus) || other.paymentStatus == paymentStatus) &&
+            (identical(other.orderAcceptedAt, orderAcceptedAt) || other.orderAcceptedAt == orderAcceptedAt) &&
+            (identical(other.orderPreparationTime, orderPreparationTime) || other.orderPreparationTime == orderPreparationTime) &&
+            const DeepCollectionEquality().equals(other._instructions, _instructions) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      userId,
-      const DeepCollectionEquality().hash(_items),
-      total,
-      subTotal,
-      discount,
-      status,
-      paymentMethod,
-      paymentStatus,
-      orderAcceptedAt,
-      orderPreparationTime,
-      const DeepCollectionEquality().hash(_instructions),
-      createdAt);
+  int get hashCode => Object.hash(runtimeType, id, userId, const DeepCollectionEquality().hash(_items), total, subTotal, discount, status, paymentMethod, paymentStatus, orderAcceptedAt,
+      orderPreparationTime, const DeepCollectionEquality().hash(_instructions), createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OrderCopyWith<_$_Order> get copyWith =>
-      __$$_OrderCopyWithImpl<_$_Order>(this, _$identity);
+  _$$_OrderCopyWith<_$_Order> get copyWith => __$$_OrderCopyWithImpl<_$_Order>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -410,16 +363,13 @@ abstract class _Order implements OrderDto {
       required final double total,
       required final double subTotal,
       final double discount,
-      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson)
-          required final OrderStatusDto status,
+      @JsonKey(fromJson: OrderStatusDto.fromJson, toJson: OrderStatusDto.toJson) required final OrderStatusDto status,
       final String? paymentMethod,
       final String? paymentStatus,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? orderAcceptedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? orderAcceptedAt,
       final int? orderPreparationTime,
       final List<String> instructions,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_Order;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
@@ -443,21 +393,16 @@ abstract class _Order implements OrderDto {
   @override
   String? get paymentStatus;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get orderAcceptedAt;
   @override
   int? get orderPreparationTime;
   @override
   List<String> get instructions;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_OrderCopyWith<_$_Order> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_OrderCopyWith<_$_Order> get copyWith => throw _privateConstructorUsedError;
 }

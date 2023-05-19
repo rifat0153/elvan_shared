@@ -34,21 +34,17 @@ mixin _$ElvanUser {
   int get totalOrdersDelivered => throw _privateConstructorUsedError;
   int get totalOrdersPending => throw _privateConstructorUsedError;
   int get totalOrdersRejected => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ElvanUserCopyWith<ElvanUser> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ElvanUserCopyWith<ElvanUser> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ElvanUserCopyWith<$Res> {
-  factory $ElvanUserCopyWith(ElvanUser value, $Res Function(ElvanUser) then) =
-      _$ElvanUserCopyWithImpl<$Res, ElvanUser>;
+  factory $ElvanUserCopyWith(ElvanUser value, $Res Function(ElvanUser) then) = _$ElvanUserCopyWithImpl<$Res, ElvanUser>;
   @useResult
   $Res call(
       {String? id,
@@ -65,13 +61,11 @@ abstract class $ElvanUserCopyWith<$Res> {
       int totalOrdersDelivered,
       int totalOrdersPending,
       int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$ElvanUserCopyWithImpl<$Res, $Val extends ElvanUser>
-    implements $ElvanUserCopyWith<$Res> {
+class _$ElvanUserCopyWithImpl<$Res, $Val extends ElvanUser> implements $ElvanUserCopyWith<$Res> {
   _$ElvanUserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -165,9 +159,7 @@ class _$ElvanUserCopyWithImpl<$Res, $Val extends ElvanUser>
 
 /// @nodoc
 abstract class _$$_ElvanUserCopyWith<$Res> implements $ElvanUserCopyWith<$Res> {
-  factory _$$_ElvanUserCopyWith(
-          _$_ElvanUser value, $Res Function(_$_ElvanUser) then) =
-      __$$_ElvanUserCopyWithImpl<$Res>;
+  factory _$$_ElvanUserCopyWith(_$_ElvanUser value, $Res Function(_$_ElvanUser) then) = __$$_ElvanUserCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -185,17 +177,12 @@ abstract class _$$_ElvanUserCopyWith<$Res> implements $ElvanUserCopyWith<$Res> {
       int totalOrdersDelivered,
       int totalOrdersPending,
       int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_ElvanUserCopyWithImpl<$Res>
-    extends _$ElvanUserCopyWithImpl<$Res, _$_ElvanUser>
-    implements _$$_ElvanUserCopyWith<$Res> {
-  __$$_ElvanUserCopyWithImpl(
-      _$_ElvanUser _value, $Res Function(_$_ElvanUser) _then)
-      : super(_value, _then);
+class __$$_ElvanUserCopyWithImpl<$Res> extends _$ElvanUserCopyWithImpl<$Res, _$_ElvanUser> implements _$$_ElvanUserCopyWith<$Res> {
+  __$$_ElvanUserCopyWithImpl(_$_ElvanUser _value, $Res Function(_$_ElvanUser) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -299,12 +286,10 @@ class _$_ElvanUser extends _ElvanUser {
       this.totalOrdersDelivered = 0,
       this.totalOrdersPending = 0,
       this.totalOrdersRejected = 0,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : super._();
 
-  factory _$_ElvanUser.fromJson(Map<String, dynamic> json) =>
-      _$$_ElvanUserFromJson(json);
+  factory _$_ElvanUser.fromJson(Map<String, dynamic> json) => _$$_ElvanUserFromJson(json);
 
   @override
   final String? id;
@@ -341,9 +326,7 @@ class _$_ElvanUser extends _ElvanUser {
   @JsonKey()
   final int totalOrdersRejected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -360,52 +343,28 @@ class _$_ElvanUser extends _ElvanUser {
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.role, role) || other.role == role) &&
-            (identical(other.totalSpent, totalSpent) ||
-                other.totalSpent == totalSpent) &&
-            (identical(other.totalOrders, totalOrders) ||
-                other.totalOrders == totalOrders) &&
-            (identical(other.totalOrdersCancelled, totalOrdersCancelled) ||
-                other.totalOrdersCancelled == totalOrdersCancelled) &&
-            (identical(other.totalOrdersDelivered, totalOrdersDelivered) ||
-                other.totalOrdersDelivered == totalOrdersDelivered) &&
-            (identical(other.totalOrdersPending, totalOrdersPending) ||
-                other.totalOrdersPending == totalOrdersPending) &&
-            (identical(other.totalOrdersRejected, totalOrdersRejected) ||
-                other.totalOrdersRejected == totalOrdersRejected) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            (identical(other.totalSpent, totalSpent) || other.totalSpent == totalSpent) &&
+            (identical(other.totalOrders, totalOrders) || other.totalOrders == totalOrders) &&
+            (identical(other.totalOrdersCancelled, totalOrdersCancelled) || other.totalOrdersCancelled == totalOrdersCancelled) &&
+            (identical(other.totalOrdersDelivered, totalOrdersDelivered) || other.totalOrdersDelivered == totalOrdersDelivered) &&
+            (identical(other.totalOrdersPending, totalOrdersPending) || other.totalOrdersPending == totalOrdersPending) &&
+            (identical(other.totalOrdersRejected, totalOrdersRejected) || other.totalOrdersRejected == totalOrdersRejected) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      uid,
-      name,
-      email,
-      imageUrl,
-      phone,
-      address,
-      role,
-      totalSpent,
-      totalOrders,
-      totalOrdersCancelled,
-      totalOrdersDelivered,
-      totalOrdersPending,
-      totalOrdersRejected,
-      createdAt);
+      runtimeType, id, uid, name, email, imageUrl, phone, address, role, totalSpent, totalOrders, totalOrdersCancelled, totalOrdersDelivered, totalOrdersPending, totalOrdersRejected, createdAt);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ElvanUserCopyWith<_$_ElvanUser> get copyWith =>
-      __$$_ElvanUserCopyWithImpl<_$_ElvanUser>(this, _$identity);
+  _$$_ElvanUserCopyWith<_$_ElvanUser> get copyWith => __$$_ElvanUserCopyWithImpl<_$_ElvanUser>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -431,12 +390,10 @@ abstract class _ElvanUser extends ElvanUser {
       final int totalOrdersDelivered,
       final int totalOrdersPending,
       final int totalOrdersRejected,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_ElvanUser;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_ElvanUser;
   const _ElvanUser._() : super._();
 
-  factory _ElvanUser.fromJson(Map<String, dynamic> json) =
-      _$_ElvanUser.fromJson;
+  factory _ElvanUser.fromJson(Map<String, dynamic> json) = _$_ElvanUser.fromJson;
 
   @override
   String? get id;
@@ -467,12 +424,9 @@ abstract class _ElvanUser extends ElvanUser {
   @override
   int get totalOrdersRejected;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_ElvanUserCopyWith<_$_ElvanUser> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ElvanUserCopyWith<_$_ElvanUser> get copyWith => throw _privateConstructorUsedError;
 }

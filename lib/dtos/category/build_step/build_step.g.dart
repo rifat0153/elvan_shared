@@ -6,9 +6,7 @@ part of 'build_step.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FoodItemBuildSteps _$$_FoodItemBuildStepsFromJson(
-        Map<String, dynamic> json) =>
-    _$_FoodItemBuildSteps(
+_$_FoodItemBuildSteps _$$_FoodItemBuildStepsFromJson(Map<String, dynamic> json) => _$_FoodItemBuildSteps(
       id: json['id'] as String?,
       title: json['title'] as String,
       isValid: json['isValid'] as bool? ?? false,
@@ -16,16 +14,11 @@ _$_FoodItemBuildSteps _$$_FoodItemBuildStepsFromJson(
       noOfItemIncludedInPrice: json['noOfItemIncludedInPrice'] as int? ?? 0,
       minSelectedAddOns: json['minSelectedAddOns'] as int? ?? 0,
       maxSelectedAddOns: json['maxSelectedAddOns'] as int? ?? 10,
-      addOns: (json['addOns'] as List<dynamic>?)
-              ?.map((e) => AddOn.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
+      addOns: (json['addOns'] as List<dynamic>?)?.map((e) => AddOn.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
       error: json['error'] as String?,
     );
 
-Map<String, dynamic> _$$_FoodItemBuildStepsToJson(
-        _$_FoodItemBuildSteps instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_FoodItemBuildStepsToJson(_$_FoodItemBuildSteps instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'isValid': instance.isValid,

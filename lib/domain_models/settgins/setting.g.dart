@@ -12,8 +12,7 @@ _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
       notice: json['notice'] as String?,
     );
 
-Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) => <String, dynamic>{
       'takingOrder': instance.takingOrder,
       'defaultTime': instance.defaultTime,
       'notice': instance.notice,

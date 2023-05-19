@@ -9,22 +9,15 @@ part of 'cart_item.dart';
 _$_CartItem _$$_CartItemFromJson(Map<String, dynamic> json) => _$_CartItem(
       id: json['id'] as String,
       foodItem: FoodItem.fromJson(json['foodItem'] as Map<String, dynamic>),
-      buildSteps: (json['buildSteps'] as List<dynamic>)
-          .map((e) => BuildStep.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      buildSteps: (json['buildSteps'] as List<dynamic>).map((e) => BuildStep.fromJson(e as Map<String, dynamic>)).toList(),
       price: (json['price'] as num).toDouble(),
       quantity: json['quantity'] as int,
       discount: (json['discount'] as num?)?.toDouble(),
-      instructions: (json['instructions'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      createdAt:
-          TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
+      instructions: (json['instructions'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+      createdAt: TimestampConverter.timestampFromJson(json['createdAt'] as Timestamp?),
     );
 
-Map<String, dynamic> _$$_CartItemToJson(_$_CartItem instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_CartItemToJson(_$_CartItem instance) => <String, dynamic>{
       'id': instance.id,
       'foodItem': instance.foodItem.toJson(),
       'buildSteps': instance.buildSteps.map((e) => e.toJson()).toList(),

@@ -37,21 +37,17 @@ mixin _$FoodItem {
   List<String> get allergens => throw _privateConstructorUsedError;
   int? get timeToPrepareInMinutes => throw _privateConstructorUsedError;
   bool get isAvailable => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FoodItemCopyWith<FoodItem> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FoodItemCopyWith<FoodItem> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FoodItemCopyWith<$Res> {
-  factory $FoodItemCopyWith(FoodItem value, $Res Function(FoodItem) then) =
-      _$FoodItemCopyWithImpl<$Res, FoodItem>;
+  factory $FoodItemCopyWith(FoodItem value, $Res Function(FoodItem) then) = _$FoodItemCopyWithImpl<$Res, FoodItem>;
   @useResult
   $Res call(
       {String? id,
@@ -71,13 +67,11 @@ abstract class $FoodItemCopyWith<$Res> {
       List<String> allergens,
       int? timeToPrepareInMinutes,
       bool isAvailable,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class _$FoodItemCopyWithImpl<$Res, $Val extends FoodItem>
-    implements $FoodItemCopyWith<$Res> {
+class _$FoodItemCopyWithImpl<$Res, $Val extends FoodItem> implements $FoodItemCopyWith<$Res> {
   _$FoodItemCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -186,9 +180,7 @@ class _$FoodItemCopyWithImpl<$Res, $Val extends FoodItem>
 
 /// @nodoc
 abstract class _$$_FoodItemCopyWith<$Res> implements $FoodItemCopyWith<$Res> {
-  factory _$$_FoodItemCopyWith(
-          _$_FoodItem value, $Res Function(_$_FoodItem) then) =
-      __$$_FoodItemCopyWithImpl<$Res>;
+  factory _$$_FoodItemCopyWith(_$_FoodItem value, $Res Function(_$_FoodItem) then) = __$$_FoodItemCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -209,17 +201,12 @@ abstract class _$$_FoodItemCopyWith<$Res> implements $FoodItemCopyWith<$Res> {
       List<String> allergens,
       int? timeToPrepareInMinutes,
       bool isAvailable,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          Timestamp? createdAt});
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) Timestamp? createdAt});
 }
 
 /// @nodoc
-class __$$_FoodItemCopyWithImpl<$Res>
-    extends _$FoodItemCopyWithImpl<$Res, _$_FoodItem>
-    implements _$$_FoodItemCopyWith<$Res> {
-  __$$_FoodItemCopyWithImpl(
-      _$_FoodItem _value, $Res Function(_$_FoodItem) _then)
-      : super(_value, _then);
+class __$$_FoodItemCopyWithImpl<$Res> extends _$FoodItemCopyWithImpl<$Res, _$_FoodItem> implements _$$_FoodItemCopyWith<$Res> {
+  __$$_FoodItemCopyWithImpl(_$_FoodItem _value, $Res Function(_$_FoodItem) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -342,16 +329,14 @@ class _$_FoodItem extends _FoodItem {
       final List<String> allergens = const [],
       this.timeToPrepareInMinutes,
       this.isAvailable = false,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          this.createdAt})
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) this.createdAt})
       : _tags = tags,
         _ingredients = ingredients,
         _buildStepsOverrides = buildStepsOverrides,
         _allergens = allergens,
         super._();
 
-  factory _$_FoodItem.fromJson(Map<String, dynamic> json) =>
-      _$$_FoodItemFromJson(json);
+  factory _$_FoodItem.fromJson(Map<String, dynamic> json) => _$$_FoodItemFromJson(json);
 
   @override
   final String? id;
@@ -400,8 +385,7 @@ class _$_FoodItem extends _FoodItem {
   @override
   @JsonKey()
   List<BuildStep> get buildStepsOverrides {
-    if (_buildStepsOverrides is EqualUnmodifiableListView)
-      return _buildStepsOverrides;
+    if (_buildStepsOverrides is EqualUnmodifiableListView) return _buildStepsOverrides;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_buildStepsOverrides);
   }
@@ -421,9 +405,7 @@ class _$_FoodItem extends _FoodItem {
   @JsonKey()
   final bool isAvailable;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   final Timestamp? createdAt;
 
   @override
@@ -439,35 +421,21 @@ class _$_FoodItem extends _FoodItem {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.price, price) || other.price == price) &&
-            (identical(other.categoryId, categoryId) ||
-                other.categoryId == categoryId) &&
-            (identical(other.categoryTitle, categoryTitle) ||
-                other.categoryTitle == categoryTitle) &&
-            (identical(other.discount, discount) ||
-                other.discount == discount) &&
-            (identical(other.isTopPick, isTopPick) ||
-                other.isTopPick == isTopPick) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
-            (identical(other.isFavorite, isFavorite) ||
-                other.isFavorite == isFavorite) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
+            (identical(other.categoryId, categoryId) || other.categoryId == categoryId) &&
+            (identical(other.categoryTitle, categoryTitle) || other.categoryTitle == categoryTitle) &&
+            (identical(other.discount, discount) || other.discount == discount) &&
+            (identical(other.isTopPick, isTopPick) || other.isTopPick == isTopPick) &&
+            (identical(other.description, description) || other.description == description) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
+            (identical(other.isFavorite, isFavorite) || other.isFavorite == isFavorite) &&
+            (identical(other.quantity, quantity) || other.quantity == quantity) &&
             const DeepCollectionEquality().equals(other._tags, _tags) &&
-            const DeepCollectionEquality()
-                .equals(other._ingredients, _ingredients) &&
-            const DeepCollectionEquality()
-                .equals(other._buildStepsOverrides, _buildStepsOverrides) &&
-            const DeepCollectionEquality()
-                .equals(other._allergens, _allergens) &&
-            (identical(other.timeToPrepareInMinutes, timeToPrepareInMinutes) ||
-                other.timeToPrepareInMinutes == timeToPrepareInMinutes) &&
-            (identical(other.isAvailable, isAvailable) ||
-                other.isAvailable == isAvailable) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            const DeepCollectionEquality().equals(other._ingredients, _ingredients) &&
+            const DeepCollectionEquality().equals(other._buildStepsOverrides, _buildStepsOverrides) &&
+            const DeepCollectionEquality().equals(other._allergens, _allergens) &&
+            (identical(other.timeToPrepareInMinutes, timeToPrepareInMinutes) || other.timeToPrepareInMinutes == timeToPrepareInMinutes) &&
+            (identical(other.isAvailable, isAvailable) || other.isAvailable == isAvailable) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
@@ -496,8 +464,7 @@ class _$_FoodItem extends _FoodItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FoodItemCopyWith<_$_FoodItem> get copyWith =>
-      __$$_FoodItemCopyWithImpl<_$_FoodItem>(this, _$identity);
+  _$$_FoodItemCopyWith<_$_FoodItem> get copyWith => __$$_FoodItemCopyWithImpl<_$_FoodItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -526,8 +493,7 @@ abstract class _FoodItem extends FoodItem {
       final List<String> allergens,
       final int? timeToPrepareInMinutes,
       final bool isAvailable,
-      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
-          final Timestamp? createdAt}) = _$_FoodItem;
+      @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson) final Timestamp? createdAt}) = _$_FoodItem;
   const _FoodItem._() : super._();
 
   factory _FoodItem.fromJson(Map<String, dynamic> json) = _$_FoodItem.fromJson;
@@ -567,12 +533,9 @@ abstract class _FoodItem extends FoodItem {
   @override
   bool get isAvailable;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampFromJson,
-      toJson: TimestampConverter.timestampToJson)
+  @JsonKey(fromJson: TimestampConverter.timestampFromJson, toJson: TimestampConverter.timestampToJson)
   Timestamp? get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_FoodItemCopyWith<_$_FoodItem> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FoodItemCopyWith<_$_FoodItem> get copyWith => throw _privateConstructorUsedError;
 }

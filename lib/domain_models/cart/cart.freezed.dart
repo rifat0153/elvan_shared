@@ -30,15 +30,13 @@ mixin _$Cart {
 
 /// @nodoc
 abstract class $CartCopyWith<$Res> {
-  factory $CartCopyWith(Cart value, $Res Function(Cart) then) =
-      _$CartCopyWithImpl<$Res, Cart>;
+  factory $CartCopyWith(Cart value, $Res Function(Cart) then) = _$CartCopyWithImpl<$Res, Cart>;
   @useResult
   $Res call({String userId, List<CartItem> cartItems});
 }
 
 /// @nodoc
-class _$CartCopyWithImpl<$Res, $Val extends Cart>
-    implements $CartCopyWith<$Res> {
+class _$CartCopyWithImpl<$Res, $Val extends Cart> implements $CartCopyWith<$Res> {
   _$CartCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,18 +65,15 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
 
 /// @nodoc
 abstract class _$$_CartCopyWith<$Res> implements $CartCopyWith<$Res> {
-  factory _$$_CartCopyWith(_$_Cart value, $Res Function(_$_Cart) then) =
-      __$$_CartCopyWithImpl<$Res>;
+  factory _$$_CartCopyWith(_$_Cart value, $Res Function(_$_Cart) then) = __$$_CartCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String userId, List<CartItem> cartItems});
 }
 
 /// @nodoc
-class __$$_CartCopyWithImpl<$Res> extends _$CartCopyWithImpl<$Res, _$_Cart>
-    implements _$$_CartCopyWith<$Res> {
-  __$$_CartCopyWithImpl(_$_Cart _value, $Res Function(_$_Cart) _then)
-      : super(_value, _then);
+class __$$_CartCopyWithImpl<$Res> extends _$CartCopyWithImpl<$Res, _$_Cart> implements _$$_CartCopyWith<$Res> {
+  __$$_CartCopyWithImpl(_$_Cart _value, $Res Function(_$_Cart) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -103,8 +98,7 @@ class __$$_CartCopyWithImpl<$Res> extends _$CartCopyWithImpl<$Res, _$_Cart>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Cart extends _Cart {
-  const _$_Cart(
-      {required this.userId, final List<CartItem> cartItems = const []})
+  const _$_Cart({required this.userId, final List<CartItem> cartItems = const []})
       : _cartItems = cartItems,
         super._();
 
@@ -129,23 +123,17 @@ class _$_Cart extends _Cart {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Cart &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            const DeepCollectionEquality()
-                .equals(other._cartItems, _cartItems));
+        (other.runtimeType == runtimeType && other is _$_Cart && (identical(other.userId, userId) || other.userId == userId) && const DeepCollectionEquality().equals(other._cartItems, _cartItems));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, userId, const DeepCollectionEquality().hash(_cartItems));
+  int get hashCode => Object.hash(runtimeType, userId, const DeepCollectionEquality().hash(_cartItems));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CartCopyWith<_$_Cart> get copyWith =>
-      __$$_CartCopyWithImpl<_$_Cart>(this, _$identity);
+  _$$_CartCopyWith<_$_Cart> get copyWith => __$$_CartCopyWithImpl<_$_Cart>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -156,8 +144,7 @@ class _$_Cart extends _Cart {
 }
 
 abstract class _Cart extends Cart {
-  const factory _Cart(
-      {required final String userId, final List<CartItem> cartItems}) = _$_Cart;
+  const factory _Cart({required final String userId, final List<CartItem> cartItems}) = _$_Cart;
   const _Cart._() : super._();
 
   factory _Cart.fromJson(Map<String, dynamic> json) = _$_Cart.fromJson;

@@ -30,29 +30,18 @@ mixin _$BuildStepDto {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BuildStepDtoCopyWith<BuildStepDto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $BuildStepDtoCopyWith<BuildStepDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $BuildStepDtoCopyWith<$Res> {
-  factory $BuildStepDtoCopyWith(
-          BuildStepDto value, $Res Function(BuildStepDto) then) =
-      _$BuildStepDtoCopyWithImpl<$Res, BuildStepDto>;
+  factory $BuildStepDtoCopyWith(BuildStepDto value, $Res Function(BuildStepDto) then) = _$BuildStepDtoCopyWithImpl<$Res, BuildStepDto>;
   @useResult
-  $Res call(
-      {String? id,
-      String title,
-      bool isRequired,
-      int noOfItemIncludedInPrice,
-      int minSelectedAddOns,
-      int maxSelectedAddOns,
-      List<AddOnDto> addOns});
+  $Res call({String? id, String title, bool isRequired, int noOfItemIncludedInPrice, int minSelectedAddOns, int maxSelectedAddOns, List<AddOnDto> addOns});
 }
 
 /// @nodoc
-class _$BuildStepDtoCopyWithImpl<$Res, $Val extends BuildStepDto>
-    implements $BuildStepDtoCopyWith<$Res> {
+class _$BuildStepDtoCopyWithImpl<$Res, $Val extends BuildStepDto> implements $BuildStepDtoCopyWith<$Res> {
   _$BuildStepDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -105,30 +94,16 @@ class _$BuildStepDtoCopyWithImpl<$Res, $Val extends BuildStepDto>
 }
 
 /// @nodoc
-abstract class _$$_FoodItemBuildStepDtosCopyWith<$Res>
-    implements $BuildStepDtoCopyWith<$Res> {
-  factory _$$_FoodItemBuildStepDtosCopyWith(_$_FoodItemBuildStepDtos value,
-          $Res Function(_$_FoodItemBuildStepDtos) then) =
-      __$$_FoodItemBuildStepDtosCopyWithImpl<$Res>;
+abstract class _$$_FoodItemBuildStepDtosCopyWith<$Res> implements $BuildStepDtoCopyWith<$Res> {
+  factory _$$_FoodItemBuildStepDtosCopyWith(_$_FoodItemBuildStepDtos value, $Res Function(_$_FoodItemBuildStepDtos) then) = __$$_FoodItemBuildStepDtosCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? id,
-      String title,
-      bool isRequired,
-      int noOfItemIncludedInPrice,
-      int minSelectedAddOns,
-      int maxSelectedAddOns,
-      List<AddOnDto> addOns});
+  $Res call({String? id, String title, bool isRequired, int noOfItemIncludedInPrice, int minSelectedAddOns, int maxSelectedAddOns, List<AddOnDto> addOns});
 }
 
 /// @nodoc
-class __$$_FoodItemBuildStepDtosCopyWithImpl<$Res>
-    extends _$BuildStepDtoCopyWithImpl<$Res, _$_FoodItemBuildStepDtos>
-    implements _$$_FoodItemBuildStepDtosCopyWith<$Res> {
-  __$$_FoodItemBuildStepDtosCopyWithImpl(_$_FoodItemBuildStepDtos _value,
-      $Res Function(_$_FoodItemBuildStepDtos) _then)
-      : super(_value, _then);
+class __$$_FoodItemBuildStepDtosCopyWithImpl<$Res> extends _$BuildStepDtoCopyWithImpl<$Res, _$_FoodItemBuildStepDtos> implements _$$_FoodItemBuildStepDtosCopyWith<$Res> {
+  __$$_FoodItemBuildStepDtosCopyWithImpl(_$_FoodItemBuildStepDtos _value, $Res Function(_$_FoodItemBuildStepDtos) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -179,18 +154,11 @@ class __$$_FoodItemBuildStepDtosCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_FoodItemBuildStepDtos extends _FoodItemBuildStepDtos {
   const _$_FoodItemBuildStepDtos(
-      {this.id,
-      required this.title,
-      this.isRequired = false,
-      this.noOfItemIncludedInPrice = 0,
-      this.minSelectedAddOns = 0,
-      this.maxSelectedAddOns = 10,
-      final List<AddOnDto> addOns = const []})
+      {this.id, required this.title, this.isRequired = false, this.noOfItemIncludedInPrice = 0, this.minSelectedAddOns = 0, this.maxSelectedAddOns = 10, final List<AddOnDto> addOns = const []})
       : _addOns = addOns,
         super._();
 
-  factory _$_FoodItemBuildStepDtos.fromJson(Map<String, dynamic> json) =>
-      _$$_FoodItemBuildStepDtosFromJson(json);
+  factory _$_FoodItemBuildStepDtos.fromJson(Map<String, dynamic> json) => _$$_FoodItemBuildStepDtosFromJson(json);
 
   @override
   final String? id;
@@ -229,36 +197,21 @@ class _$_FoodItemBuildStepDtos extends _FoodItemBuildStepDtos {
             other is _$_FoodItemBuildStepDtos &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.isRequired, isRequired) ||
-                other.isRequired == isRequired) &&
-            (identical(
-                    other.noOfItemIncludedInPrice, noOfItemIncludedInPrice) ||
-                other.noOfItemIncludedInPrice == noOfItemIncludedInPrice) &&
-            (identical(other.minSelectedAddOns, minSelectedAddOns) ||
-                other.minSelectedAddOns == minSelectedAddOns) &&
-            (identical(other.maxSelectedAddOns, maxSelectedAddOns) ||
-                other.maxSelectedAddOns == maxSelectedAddOns) &&
+            (identical(other.isRequired, isRequired) || other.isRequired == isRequired) &&
+            (identical(other.noOfItemIncludedInPrice, noOfItemIncludedInPrice) || other.noOfItemIncludedInPrice == noOfItemIncludedInPrice) &&
+            (identical(other.minSelectedAddOns, minSelectedAddOns) || other.minSelectedAddOns == minSelectedAddOns) &&
+            (identical(other.maxSelectedAddOns, maxSelectedAddOns) || other.maxSelectedAddOns == maxSelectedAddOns) &&
             const DeepCollectionEquality().equals(other._addOns, _addOns));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      isRequired,
-      noOfItemIncludedInPrice,
-      minSelectedAddOns,
-      maxSelectedAddOns,
-      const DeepCollectionEquality().hash(_addOns));
+  int get hashCode => Object.hash(runtimeType, id, title, isRequired, noOfItemIncludedInPrice, minSelectedAddOns, maxSelectedAddOns, const DeepCollectionEquality().hash(_addOns));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FoodItemBuildStepDtosCopyWith<_$_FoodItemBuildStepDtos> get copyWith =>
-      __$$_FoodItemBuildStepDtosCopyWithImpl<_$_FoodItemBuildStepDtos>(
-          this, _$identity);
+  _$$_FoodItemBuildStepDtosCopyWith<_$_FoodItemBuildStepDtos> get copyWith => __$$_FoodItemBuildStepDtosCopyWithImpl<_$_FoodItemBuildStepDtos>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -279,8 +232,7 @@ abstract class _FoodItemBuildStepDtos extends BuildStepDto {
       final List<AddOnDto> addOns}) = _$_FoodItemBuildStepDtos;
   const _FoodItemBuildStepDtos._() : super._();
 
-  factory _FoodItemBuildStepDtos.fromJson(Map<String, dynamic> json) =
-      _$_FoodItemBuildStepDtos.fromJson;
+  factory _FoodItemBuildStepDtos.fromJson(Map<String, dynamic> json) = _$_FoodItemBuildStepDtos.fromJson;
 
   @override
   String? get id;
@@ -298,6 +250,5 @@ abstract class _FoodItemBuildStepDtos extends BuildStepDto {
   List<AddOnDto> get addOns;
   @override
   @JsonKey(ignore: true)
-  _$$_FoodItemBuildStepDtosCopyWith<_$_FoodItemBuildStepDtos> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FoodItemBuildStepDtosCopyWith<_$_FoodItemBuildStepDtos> get copyWith => throw _privateConstructorUsedError;
 }
